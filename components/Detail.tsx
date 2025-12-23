@@ -7,8 +7,10 @@ import { useParams} from "next/navigation";
 export default function Detail() {
 
     const params = useParams();
-    const {id} = params;
-    const detail = PRODUCT.find(p => String(p.id) === id);
+    const {id, category} = params;
+    const detail = id ?
+        PRODUCT.find(p => String(p.id) === id) :
+        PRODUCT.find(p => String(p.category) === category);
 
     if (!detail) {
         return <div className="loading">홈페이지를 불러오는 중입니다.</div>;

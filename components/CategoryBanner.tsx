@@ -13,7 +13,7 @@ export default function CategoryBanner() {
         <main>
             <div>
                 <div>
-                    <Image src={category.banner} alt={`${category.title} banner`} width={2560} height={400} priority quality={100}/>
+                    <Image src={category.banner} alt={`${category.title} banner`} width={2560} height={600} priority quality={100}/>
                 </div>
                 <div>
                     <h1>{category.title}</h1>

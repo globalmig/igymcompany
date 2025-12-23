@@ -53,6 +53,11 @@ export const CATEGORY_MAP: { [key: string]: { title: string; icon?: string, bann
         //     { name: "기타", url: "more",},
         // ],
     },
+    sports_competition: {
+        title: '체육대회',
+        icon: "/icons/category_sports.png",
+        banner: "/images/sports_banner.jpg",
+    },
     experience: {
         title: '체험놀이',
         icon: "/icons/category_experience.png",
@@ -63,10 +68,5 @@ export const CATEGORY_MAP: { [key: string]: { title: string; icon?: string, bann
         //     { name: "놀이터 에어바운스", url: "playground",},
         //     { name: "챌린지 에어바운스", url: "challenge",},
         // ],
-    },
-    sports_competition: {
-        title: '체육대회',
-        icon: "/icons/category_sports.png",
-        banner: "/images/sports_banner.jpg",
     },
 };

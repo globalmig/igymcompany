@@ -92,7 +92,7 @@ button {
 }
 
 article>div {
-    padding: 80px 5% 100px;
+    padding: 80px 5%;
 }
 
 /* header */
@@ -115,29 +115,96 @@ main>div>:first-child img {
     object-fit: cover;
 }
 
+main.main-home {
+    height: 650px;
+}
+
+main.main-home>div>:first-child img {
+    height: 650px;
+}
+
 main>div>:last-child {
     position: absolute;
     width: 80%;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     text-align: center;
     color: white;
 }
 
 main>div>:last-child h1 {
     font-family: "SB_L";
+    font-size: 2.5rem;
+}
+
+main.main-home>div>:last-child {
+    top: 65%;
+}
+
+main.main-home>div>:last-child h1 {
+    font-family: "SB_L";
     font-size: 2.2rem;
+}
+
+main>div>:last-child h3 {
+    font-family: "SB_L";
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+main.main-home>div>:last-child h3 {
+    font-size: 1.5rem;
 }
 
 main>div>:last-child p {
     margin-top: 20px;
 }
 
+.scroll {
+    margin-top: 120px;
+    text-align: center;
+}
+
+.scroll>p {
+    margin-top: 20px;
+    font-family: 'SB_M';
+    font-size: 0.8rem;
+    color: white;
+}
+
+.mouse_scroll {
+    height: 70px;
+    position: relative;
+}
+
+.mouse_scroll span::after {
+    content: '';
+    display: block;
+    width: 2px;
+    height: 60px;
+    margin: 5px auto;
+    background: white;
+    opacity: 0.5;
+    animation: mouse-pulse 2.0s ease infinite;
+}
+
+@keyframes mouse-pulse {
+    0% {
+        opacity: 1;
+        transform: translate(-0.5px, 2px);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(-0.5px, 15px);
+    }
+}
+
 /* footer */
 
 footer {
-    background-color: #333;
+    background-color: #222;
     position: relative;
 }
 
@@ -150,6 +217,15 @@ footer>div>:first-child {
     position: fixed;
     right: 5%;
     bottom: 80px;
+}
+
+footer>div>:first-child>div {
+    cursor: pointer;
+}
+
+footer>div>:first-child>div img {
+    width: 60px;
+    height: auto;
 }
 
 footer>div>:first-child>:first-child {
@@ -178,7 +254,7 @@ footer>div>:last-child>:first-child p {
     margin-top: 20px;
 }
 
-footer>div>:last-child > ul li{
+footer>div>:last-child>ul li {
     color: #aaa;
     margin: 5px 0;
 }
@@ -198,8 +274,6 @@ footer>div>:last-child>p {
     /* header */
 
     /* nav */
-
-    /* footer */
 
 }
 
@@ -224,7 +298,7 @@ footer>div>:last-child>p {
 
     article>div {
         padding: 150px 0px;
-        width: 1440px;
+        width: 1200px;
         margin: 0 auto;
     }
 
@@ -233,10 +307,90 @@ footer>div>:last-child>p {
     /* nav */
 
     /* main */
+
+    main {
+        height: 450px;
+    }
+
+    main>div>:first-child img {
+        height: 450px;
+    }
+
+    main.main-home>div>:last-child {
+        top: 60%;
+    }
+
     main>div>:last-child h1 {
-    font-size: 3rem;
-}
+        font-size: 3rem;
+    }
+
+    main.main-home>div>:last-child h1 {
+        font-size: 3rem;
+    }
+
+    main.main-home>div>:last-child h3 {
+        font-size: 2rem;
+    }
+
+    .scroll {
+        margin-top: 150px;
+    }
+
+    .scroll>p {
+        margin-top: 20px;
+        font-size: 0.8rem;
+    }
+
+    .mouse_scroll {
+        height: 70px;
+    }
+
+    .mouse_scroll span::after {
+        width: 2px;
+        height: 60px;
+    }
 
     /* footer */
+
+    footer>div {
+        width: 1200px;
+        margin: 0 auto;
+        padding: 50px 0 80px
+    }
+
+    footer>div>:first-child {
+        right: 10%;
+        bottom: 200px;
+    }
+
+    footer>div>:last-child>:first-child button a {
+        padding: 5px 30px;
+    }
+
+    footer>div>:last-child>:first-child p {
+        font-size: 1rem;
+    }
+
+    footer>div>:last-child>ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        width: 800px;
+    }
+
+    footer>div>:last-child>ul li {
+        margin: 0;
+        font-size: 1rem;
+    }
+
+    footer>div>:last-child>ul li:not(footer>div>:last-child>ul li:last-of-type,
+        footer>div>:last-child>ul li:nth-last-of-type(2)) {
+        padding-right: 15px;
+        border-right: 1px solid #aaa
+    }
+
+    footer>div>:last-child>p {
+        font-size: 1rem;
+    }
 
 }

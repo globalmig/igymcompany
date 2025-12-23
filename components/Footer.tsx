@@ -14,11 +14,11 @@ export default function Footer() {
                 <div>
                     <div>
                         <Link href="tel:010-3546-9985">
-                            <Image src="/icons/tel.png" alt="문의하기" width={70} height={70} />
+                            <Image src="/icons/tel.png" alt="문의하기" width={100} height={100} />
                         </Link>
                     </div>
                     <div onClick={handleScroll}>
-                        <Image src="/icons/top.png" alt="맨위로 이동" width={70} height={70} />
+                        <Image src="/icons/top.png" alt="맨위로 이동" width={100} height={100} />
                     </div>
                 </div>
                 <div>
@@ -26,7 +26,7 @@ export default function Footer() {
                         <button>
                             <Link href="/inquire">문의하기</Link>
                         </button>
-                        <p>운영시간 : 평일 00:00~ 00:00 (주말 및 공휴일 제외)</p>
+                        <p>운영시간 : 평일 09:00~ 18:00 (주말 및 공휴일 제외)</p>
                     </div>
                     <ul>
                         <li>상호명 : (주)에스원이벤트</li>

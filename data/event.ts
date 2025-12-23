@@ -4,9 +4,9 @@ export const EVENT = [
         name: "2025년 진천청년회의소 제 55대 회장·회장단·감사 이취임식",
         thumnail: "/images/행사/제55대_취임식1.jpg",
         detail: [
+            "/images/행사/제55대_취임식1.jpg",
             "/images/행사/제55대_취임식2.jpg",
             "/images/행사/제55대_취임식3.jpg",
-            "/images/행사/제55대_취임식4.jpg",
         ]
     },{
         id: 2,
@@ -27,6 +27,9 @@ export const EVENT = [
         id: 5,
         name: "제 25회 진천군자율 방범연합대 한마음 대회",
         thumnail: "/images/행사/제25회_한마음대회_thumnail.jpg",
+        detail: [
+            "/images/행사/제25회_한마음대회1.jpg",
+        ]
     },{
         id: 6,
         name: "2024년 (주)에코에너젠 송년회 행사",
@@ -81,9 +84,6 @@ export const EVENT = [
         thumnail: "/images/행사/제17회_어린이날잔치_thumnail.jpg",
         detail: [
             "/images/행사/제17회_어린이날잔치1.jpg",
-            "/images/행사/제17회_어린이날잔치2.jpg",
-            "/images/행사/제17회_어린이날잔치3.jpg",
-            "/images/행사/제17회_어린이날잔치4.jpg",
         ]
     },{
         id: 13,

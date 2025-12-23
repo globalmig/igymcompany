@@ -14,6 +14,9 @@ export const PRODUCT = [
             "/images/트러스/트러스3.jpg",
             "/images/트러스/트러스4.jpg",
             "/images/트러스/트러스5.jpg",
+            "/images/트러스/트러스6.jpg",
+            "/images/트러스/트러스7.jpg",
+            "/images/트러스/트러스8.jpg",
         ]
     },
     {
@@ -340,6 +343,9 @@ export const PRODUCT = [
         name: "대형 트램펄린",
         category: "amusement",
         thumnail: "/images/놀이기구/트램펄린_thumnail.jpg",
+        intro: [
+            "다양한 규모의 놀이기구",
+        ],
         contents: [
             "다양한 규모의 행사에 맞춰 배치가 가능하며 안전성과 활용도가 높은 놀이기구입니다."],
         size: "별도 문의",
@@ -354,6 +360,9 @@ export const PRODUCT = [
         name: "레일기차",
         category: "amusement",
         thumnail: "/images/놀이기구/레일기차_thumnail.jpg",
+        intro: [
+            "다양한 규모의 놀이기구",
+        ],
         contents: [
             "다양한 규모의 행사에 맞춰 배치가 가능하며 안전성과 활용도가 높은 놀이기구입니다."],
         size: "별도 문의",
@@ -368,6 +377,9 @@ export const PRODUCT = [
         name: "스프링말",
         category: "amusement",
         thumnail: "/images/놀이기구/스프링말_thumnail.jpg",
+        intro: [
+            "다양한 규모의 놀이기구",
+        ],
         contents: [
             "다양한 규모의 행사에 맞춰 배치가 가능하며 안전성과 활용도가 높은 놀이기구입니다."],
         size: "별도 문의",
@@ -381,6 +393,9 @@ export const PRODUCT = [
         name: "키드라이더",
         category: "amusement",
         thumnail: "/images/놀이기구/키드라이더_thumnail.jpg",
+        intro: [
+            "다양한 규모의 놀이기구",
+        ],
         contents: [
             "다양한 규모의 행사에 맞춰 배치가 가능하며 안전성과 활용도가 높은 놀이기구입니다."],
         size: "별도 문의",
@@ -395,6 +410,9 @@ export const PRODUCT = [
         name: "회전라이더",
         category: "amusement",
         thumnail: "/images/놀이기구/회전라이더_thumnail.jpg",
+        intro: [
+            "다양한 규모의 놀이기구",
+        ],
         contents: [
             "다양한 규모의 행사에 맞춰 배치가 가능하며 안전성과 활용도가 높은 놀이기구입니다."],
         size: "별도 문의",

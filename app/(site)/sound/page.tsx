@@ -1,7 +1,5 @@
-import Detail from "@/components/Detail";
+import { redirect } from "next/navigation";
 
 export default function SoundPage() {
-    return (
-            <Detail />
-    )
+    redirect("/sound/39")
 }

@@ -6,7 +6,7 @@ export default function EventPage() {
         <article className="event">
             <div>
                 <div>
-                    <Image src="/images/행사/banner.jpg" alt="공식행사" width={1000} height={500} />
+                    <Image src="/images/행사/banner.jpg" alt="공식행사" width={1000} height={619} />
                 </div>
                 <div>
                     <h2>사회적 가치를 담은 공식 행사</h2>

@@ -1,4 +1,7 @@
+"use client";
+import Aos from "aos";
 import Image from "next/image";
+import { useEffect } from "react";
 
 const sportsImage = [
     "/images/체육대회/체육대회1.jpg",
@@ -14,6 +17,11 @@ const sportsImage = [
 ]
 
 export default function SportsPage() {
+    useEffect(() => {
+                Aos.init();
+                Aos.refresh();
+            }, []);
+
     return (
         <article className="sports">
             <div>
@@ -26,7 +34,9 @@ export default function SportsPage() {
                 </div>
                 <div className="display-flex-flow">
                     {sportsImage.map(s => 
-                        <div key={s}>
+                        <div key={s} data-aos="fade-up"
+                    data-aos-easing="ease-out"
+                    data-aos-duration="1000">
                             <Image src={s} alt="체육대회" width={700} height={500}/>
                         </div>
                     )}
