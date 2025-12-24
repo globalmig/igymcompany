@@ -6,17 +6,18 @@ import Slider from "react-slick";
 import { forwardRef, useImperativeHandle, useRef } from "react";
 
 interface SlideHandle {
-  next: () => void;
-  prev: () => void;
+    next: () => void;
+    prev: () => void;
 }
 
-const MainSlide = forwardRef<SlideHandle>((_, ref) =>{
+const MainSlide = forwardRef<SlideHandle>((_, ref) => {
     const sliderRef = useRef<Slider>(null);
 
-  useImperativeHandle(ref, () => ({
-    next: () => sliderRef.current?.slickNext(),
-    prev: () => sliderRef.current?.slickPrev(),
-  }));
+    useImperativeHandle(ref, () => ({
+            next: () => sliderRef.current?.slickNext(),
+            prev: () => sliderRef.current?.slickPrev(),
+        
+    }));
 
     const settings = {
         dots: false,
@@ -27,7 +28,7 @@ const MainSlide = forwardRef<SlideHandle>((_, ref) =>{
         slidesToScroll: 1,
         autoplay: true,
         fade: true,
-        autoplaySpeed: 4500,
+        autoplaySpeed: 3000,
         pauseOnHover: false,
         responsive: [
             {
@@ -42,13 +43,16 @@ const MainSlide = forwardRef<SlideHandle>((_, ref) =>{
     return (
         <Slider ref={sliderRef} {...settings} className="main-slider">
             <div>
-                <Image src="/images/banner.jpg" alt="배너1" width={2560} height={942} priority quality={100} />
+                <Image src="/images/banner_1.jpg" alt="배너1" width={2560} height={942} priority quality={100} />
             </div>
             <div>
-                <Image src="/images/banner.jpg" alt="배너2" width={2560} height={942} priority quality={100} />
+                <Image src="/images/banner_2.jpg" alt="배너2" width={2560} height={942} priority quality={100} />
             </div>
             <div>
-                <Image src="/images/banner.jpg" alt="배너3" width={2560} height={942} priority quality={100} />
+                <Image src="/images/banner_3.jpg" alt="배너3" width={2560} height={942} priority quality={100} />
+            </div>
+            <div>
+                <Image src="/images/banner_4.jpg" alt="배너3" width={2560} height={942} priority quality={100} />
             </div>
         </Slider>
     )

@@ -465,6 +465,7 @@ footer>div>:last-child>p {
 
     .pc-flex {
         display: flex;
+        pointer-events: auto;
     }
 
     .pc {
@@ -585,6 +586,7 @@ footer>div>:last-child>p {
         transform: translate(-50%, -50%);
         justify-content: space-between;
         width: 1300px;
+        z-index: 5;
     }
 
     main.main-home>div>:nth-child(2) button {
