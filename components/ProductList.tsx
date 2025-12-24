@@ -4,7 +4,7 @@ import ProductItem from "./ProductItem";
 import { useParams } from "next/navigation";
 
 interface ProductListProps {
-    preview : string,
+    preview? : string,
 }
 
 export default function ProductList({ preview }: ProductListProps) {

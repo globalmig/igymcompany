@@ -27,14 +27,14 @@ export default function HomePage() {
     <>
       <main className="main-home">
         <div>
-          <MainSlide ref={slideRef}/>
+          <MainSlide ref={slideRef} />
           <div className="pc-flex">
             <button onClick={() => slideRef.current?.prev()}>
-                  <Image src="/icons/prev.png" alt="이전" width={35} height={85} />
-                </button>
-                <button onClick={() => slideRef.current?.next()}>
-                  <Image src="/icons/next.png" alt="다음" width={35} height={85} />
-                </button>
+              <Image src="/icons/prev.png" alt="이전" width={35} height={85} />
+            </button>
+            <button onClick={() => slideRef.current?.next()}>
+              <Image src="/icons/next.png" alt="다음" width={35} height={85} />
+            </button>
           </div>
           <div>
             <h3 data-aos="fade-up"
