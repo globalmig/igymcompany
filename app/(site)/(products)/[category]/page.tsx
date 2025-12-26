@@ -3,7 +3,7 @@ import ProductList from "@/components/ProductList";
 export default function ProductPage() {
 
     return (
-        <article className="list">
+        <article>
             <div>
                 <ProductList />
             </div>

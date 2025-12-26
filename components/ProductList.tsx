@@ -17,7 +17,7 @@ export default function ProductList({ preview }: ProductListProps) {
     const isPreview = category ? true : false;
 
     return (
-        <div className="display-flex-flow">
+        <div className="list">
             {product.map(p => <ProductItem key={p.id} product={p} isPreview={isPreview}/>)}
         </div>
     )

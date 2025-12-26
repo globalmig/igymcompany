@@ -25,7 +25,8 @@ export default function EventItem({event} : EventItemProps) {
     return (
         <section className="event-item" onMouseEnter={() => setIsHover(true)} onMouseLeave={() => setIsHover(false)} data-aos="fade-up"
                     data-aos-easing="ease-out"
-                    data-aos-duration="1000">
+                    data-aos-duration="1000"
+                    data-aos-once="true">
             <Link href={`/event/${event.id}`}>
             <div>
                 <Image src={event.thumnail} alt={event.name} width={700} height={500}/>

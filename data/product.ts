@@ -151,10 +151,8 @@ export const PRODUCT = [
         ],
         size: "5M * 4M * 3M 사이즈",
         detail: [
-            "/images/에어바운스/농구1.jpg",
-            "/images/에어바운스/농구2.jpg",
-            "/images/에어바운스/농구3.jpg",
-            "/images/에어바운스/농구4.jpg",
+            "/images/에어바운스/농구_thumnail.jpg",
+            "/images/에어바운스/양궁2.jpg",
         ]
     }, {
         id: 11,
@@ -271,7 +269,7 @@ export const PRODUCT = [
         id: 19,
         name: "야자수 워터슬라이드",
         category: "waterslide",
-        thumnail: "/images/워터슬라이드/야자수_thumnail.jpg",
+        thumnail: "/images/워터슬라이드/야자수1.jpg",
         intro: [
             "+ 5M * 5M 에어풀장",
         ],
@@ -279,39 +277,35 @@ export const PRODUCT = [
         detail: [
             "/images/워터슬라이드/야자수1.jpg",
             "/images/워터슬라이드/야자수2.jpg",
+            "/images/워터슬라이드/아이스크림3.jpg",
         ]
     }, {
         id: 20,
         name: "아이스크림 워터슬라이드 (대형)",
         category: "waterslide",
-        thumnail: "/images/워터슬라이드/아이스크림(대)_thumnail.jpg",
+        thumnail: "/images/워터슬라이드/아이스크림_thumnail.jpg",
         intro: [
             "+ 6M * 6M 에어풀장",
         ],
         size: "6M * 4M * 4M",
-        detail: [
-            "/images/워터슬라이드/아이스크림(대)1.jpg",
-            "/images/워터슬라이드/아이스크림(대)2.jpg",
-            "/images/워터슬라이드/공통1.jpg",
-            "/images/워터슬라이드/공통2.jpg",
-            "/images/워터슬라이드/공통3.jpg",
-        ]
-    }, {
-        id: 21,
-        name: "아이스크림 워터슬라이드 (중소형)",
-        category: "waterslide",
-        thumnail: "/images/워터슬라이드/아이스크림_thumnail.jpg",
-        intro: [
-            "+ 5M * 5M 에어풀장",
-        ],
-        size: "4M * 3M * 4.8M",
         detail: [
             "/images/워터슬라이드/아이스크림1.jpg",
             "/images/워터슬라이드/아이스크림2.jpg",
             "/images/워터슬라이드/아이스크림3.jpg",
             "/images/워터슬라이드/공통1.jpg",
             "/images/워터슬라이드/공통2.jpg",
-            "/images/워터슬라이드/공통3.jpg",
+        ]
+    }, {
+        id: 21,
+        name: "아이스크림 워터슬라이드 (중소형)",
+        category: "waterslide",
+        thumnail: "/images/워터슬라이드/아이스크림(중소)1.jpg",
+        intro: [
+            "+ 5M * 5M 에어풀장",
+        ],
+        size: "4M * 3M * 4.8M",
+        detail: [
+            "/images/워터슬라이드/아이스크림(중소)1.jpg",
         ]
     }, {
         id: 22,

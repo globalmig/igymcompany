@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function Footer() {
 
     const handleScroll = () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' })
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
     return (

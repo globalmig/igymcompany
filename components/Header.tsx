@@ -2,12 +2,17 @@
 import { CATEGORY_MAP } from "@/data/category";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { usePathname } from "next/navigation";
+import { useEffect, useRef, useState } from "react";
 
 export default function Header() {
 
-    const [isFocus, setIsFocus] = useState<string | null>(null);
+    // const [isFocus, setIsFocus] = useState<string | null>(null);
+    const pathname = usePathname();
+    const isFocus = pathname.split("/")[1] || null;
     const [isOpen, setIsOpen] = useState<boolean>(false);
+    const [isSticky, setIsSticky] = useState<boolean>(false);
+    const horizontalRef = useRef<HTMLDivElement>(null);
 
     // mobile gnb : about, inquire 제외
     const excludeNot = ["about", "inquire"];
@@ -18,19 +23,43 @@ export default function Header() {
             ...value,
         }));
 
+    useEffect(() => {
+        const handleScroll = () => {
+            setIsSticky(window.scrollY > 268);
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
+    useEffect(() => {
+    const el = horizontalRef.current;
+    if (!el) return;
+
+    const onWheel = (e: WheelEvent) => {
+        if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+            e.preventDefault();
+            el.scrollLeft += e.deltaY;
+        }
+    };
+    el.addEventListener("wheel", onWheel, { passive: false });
+
+    return () => el.removeEventListener("wheel", onWheel);
+}, []);
+
     return (
         <>
             <header>
                 <div>
 
                     <div className="display-flex">
-                        <h3><Link href="/">(주)에스원이벤트</Link></h3>
+                        <h3><Link href="/" >(주)에스원이벤트</Link></h3>
                         <div className="mo" onClick={() => setIsOpen(true)}>
-                            <Image src="/icons/nav.png" alt="메뉴열기" width={30} height={30} />
+                            <Image src="/icons/nav.png" alt="메뉴열기" width={35} height={29} />
                         </div>
                         <div className="pc-flex">
-                            <Link href="/about">회사소개</Link>
-                            <Link href="/inquire">문의하기</Link>
+                            <Link href="/about" >회사소개</Link>
+                            <Link href="/inquire" >문의하기</Link>
                         </div>
                     </div>
 
@@ -45,7 +74,7 @@ export default function Header() {
                             <ul className="display-flex-flow">
                                 {categoryMenu.map((c) =>
                                     <li key={c.key} className={isFocus === c.key ? "on" : ""}>
-                                        <Link href={`/${c.key}`} onFocus={() => setIsFocus(c.key)} onClick={() => setIsOpen(false)}>
+                                        <Link href={`/${c.key}`} onClick={() => setIsOpen(false)}>
                                             <div>
                                                 <Image src={c.menu_img} alt={c.title} width={148} height={148} />
                                             </div>
@@ -57,16 +86,16 @@ export default function Header() {
                                 <div className="display-flex">
                                     <section>
                                         <div>
-                                            <Link href="/about" onClick={() => setIsOpen(false)} onFocus={() => setIsFocus(null)}>
-                                                <Image src="/icons/about.png" alt="회사소개" width={100} height={100} />
+                                            <Link href="/about"  onClick={() => setIsOpen(false)}>
+                                                <Image src="/icons/about.png" alt="회사소개" width={31} height={28} />
                                             </Link>
                                         </div>
                                         <p>회사소개</p>
                                     </section>
                                     <section>
                                         <div>
-                                            <Link href="/inquire" onClick={() => setIsOpen(false)} onFocus={() => setIsFocus(null)}>
-                                                <Image src="/icons/inquire.png" alt="문의하기" width={100} height={100} />
+                                            <Link href="/inquire"  onClick={() => setIsOpen(false)}>
+                                                <Image src="/icons/inquire.png" alt="문의하기" width={33} height={31} />
                                             </Link>
                                         </div>
                                         <p>문의하기</p>
@@ -80,21 +109,22 @@ export default function Header() {
                                     </ul>
                                 </div>
                             </div>
-                            <ul className="mo">
+                            <div>
+                                <ul className="mo">
                                 <li>대표번호 : 010-3546-9985</li>
                                 <li>충정북도 진천군 초평면 원댕이길 15, 에스원이벤트창고</li>
                             </ul>
+                            </div>
                         </nav>
                     </div>
 
                 </div>
             </header>
-            <div className="menu-sticky">
-                {/* nav-select 연동, 맨 왼쪽으로 위치 */}
-                <div>
+            <div className={`menu-sticky ${isSticky ? "show" : ""}`}>
+                <div ref={horizontalRef}>
                     <ul className="display-flex">
                         {categoryMenu.map((c) =>
-                            <li key={c.key} onFocus={() => setIsFocus(c.key)} onClick={() => setIsOpen(false)} className={isFocus === c.key ? "on" : ""}>
+                            <li key={c.key} onClick={() => setIsOpen(false)} className={isFocus === c.key ? "on" : ""}>
                                 <Link href={`/${c.key}`}>{c.title}</Link>
                             </li>)}
                     </ul>

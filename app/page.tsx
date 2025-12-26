@@ -96,6 +96,18 @@ export default function HomePage() {
           </div>
         </div>
       </article>
+
+      <article className="home-intro">
+        <div>
+            <div>
+              <h2>(주)에스원이벤트는<br/>파트너쉽을 통한 행사기획,대행 솔루션입니다.</h2>
+              <p>다년간의 행사경험 통해 전문기업으로 성장해 왔습니다. <br className="pc"/> 회사 소개 실적 고객 니즈에 최적화된 행사기획과 운영으로 파트너의 성과 창출을 지원합니다.<br className="pc"/> 항상 모든 프로젝트를 성실히 임무수행 하는 ㈜에스원이벤트가 되겠습니다.</p>
+              <button>
+                <Link href="/about">자세히 보기</Link>
+              </button>
+            </div>
+        </div>
+      </article>
     </>
   )
 }

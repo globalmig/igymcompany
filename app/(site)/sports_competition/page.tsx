@@ -36,7 +36,8 @@ export default function SportsPage() {
                     {sportsImage.map(s => 
                         <div key={s} data-aos="fade-up"
                     data-aos-easing="ease-out"
-                    data-aos-duration="1000">
+                    data-aos-duration="1000"
+                    data-aos-once="true">
                             <Image src={s} alt="체육대회" width={700} height={500}/>
                         </div>
                     )}

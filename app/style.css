@@ -21,6 +21,10 @@
     margin-top: 10px;
 }
 
+.solution>div>:last-child>div {
+    overflow: hidden;
+}
+
 .solution>div>:last-child section {
     width: 48%;
     margin: 10px 0;
@@ -170,6 +174,40 @@
     color: white;
 }
 
+.home-intro {
+    background-image: url("/images/home_bg.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.home-intro>div {
+    color: white;
+    text-align: center;
+}
+
+.home-intro>div>div h2 {
+    font-family: "SB_L";
+}
+
+.home-intro>div>div p {
+    margin: 20px 0 40px;
+}
+
+.home-intro>div>div button {
+    border-radius: 50px;
+    border: 1px solid white;
+    padding: 5px 25px;
+}
+
+.home-intro>div>div button a {
+    color: white;
+}
+
+.home-intro>div>div button:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
 /* 회사소개 */
 
 .about>div>:first-child {
@@ -225,6 +263,12 @@
 }
 
 /* 상품 소개 */
+
+.list {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: wrap;
+}
 
 .product-item {
     width: 48%;
@@ -619,7 +663,11 @@
         font-size: 1rem;
     }
 
-    /* 상품소개 */
+    .home-intro>div>div button {
+        padding: 8px 35px;
+    }
+
+    /* 상품 소개 */
 
     .product-item>div>:first-child img {
         height: 250px;
@@ -714,8 +762,26 @@
         font-size: 2.5rem;
     }
 
+    .solution>div>:last-child {
+        overflow: hidden;
+    }
+
+    .solution>div>:last-child>div:nth-of-type(2),
+    .solution>div>:last-child>div:nth-of-type(4) {
+        margin-top: 50px;
+    }
+
+    .solution>div>:last-child>div:nth-of-type(5),
+    .solution>div>:last-child>div:nth-of-type(7) {
+        margin-top: -50px;
+    }
+
     .solution>div>:last-child section {
         width: 280px;
+    }
+
+    .solution>div>:last-child section:nth-of-type(2) {
+        margin-top: 40px;
     }
 
     .solution>div>:last-child section>:last-child {
@@ -758,6 +824,18 @@
         font-size: 2.5rem;
     }
 
+    .home-intro>div>div h2 {
+        font-size: 2.5rem;
+    }
+
+    .home-intro>div>div p {
+        margin: 20px auto 70px;
+    }
+
+    .home-intro>div>div button a {
+        font-size: 1rem;
+    }
+
     /* 회사소개 */
 
     .about>div>:first-child {
@@ -782,14 +860,13 @@
 
     /* 상품 소개 */
 
-    .list>div>div {
+    .list {
         justify-content: left;
-        gap: 53.3px;
+        gap: 26.5px;
     }
 
     .product-item {
         width: 280px;
-        margin-bottom: 20px;
     }
 
     .product-item>div>:first-child img {

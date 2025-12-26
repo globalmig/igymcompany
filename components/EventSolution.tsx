@@ -10,6 +10,7 @@ export default function EventSolution() {
 
     const [isHover, setIsHover] = useState<number | null>(null);
     const [linkHover, setLinkHover] = useState<number | null>(null);
+    const [isFocus, setIsFocus] = useState<string | null>(null);
 
     useEffect(() => {
         Aos.init();
@@ -19,12 +20,14 @@ export default function EventSolution() {
     return (
         <div className="display-flex-flow">
             {SOLUTION.map(s =>
-                <section key={s.id}
+                <div key={s.id}>
+                    <section
                     onMouseEnter={() => setIsHover(s.id)}
                     onMouseLeave={() => setIsHover(null)}
                     data-aos="fade-up"
                     data-aos-easing="ease-out"
                     data-aos-duration="1000"
+                    data-aos-once="true"
                     >
                     <div>
                         <Image src={s.img} alt={s.name} width={316} height={412} />
@@ -34,7 +37,7 @@ export default function EventSolution() {
                         <p>{s.eng}</p>
                         <button onMouseEnter={() => setLinkHover(s.id)}
                                 onMouseLeave={() => setLinkHover(null)}>
-                            <Link href={s.url} className={`display-flex ${linkHover === s.id ? "link-hover" : ""}`}>
+                            <Link href={s.url} className={`display-flex ${linkHover === s.id ? "link-hover" : ""}`} onFocus={() => setIsFocus(s.name)}>
                                 <p>More View</p>
                                 <div>
                                     <div>
@@ -48,6 +51,7 @@ export default function EventSolution() {
                         </button>
                     </div>
                 </section>
+                </div>
             )}
         </div>
     )
