@@ -32,7 +32,7 @@ export default function ProductItem({ product, isPreview }: ProductItemProps) {
             data-aos-once="true">
             <div>
                 <div>
-                    <Link href={`/${product.category}/${product.id}`}>
+                    <Link href={`/${product.category}/${product.id}`} scroll={true}>
                         <Image src={product.thumnail} alt={product.name} width={1000} height={619} />
                     </Link>
                 </div>
@@ -48,7 +48,7 @@ export default function ProductItem({ product, isPreview }: ProductItemProps) {
             </div>
             {isPreview &&
                 <button>
-                    <Link href={`/${product.category}/${product.id}`}>자세히 보기</Link>
+                    <Link href={`/${product.category}/${product.id}`} scroll={true}>자세히 보기</Link>
                 </button>
             }
         </section>

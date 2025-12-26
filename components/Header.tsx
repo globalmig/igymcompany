@@ -33,33 +33,35 @@ export default function Header() {
     }, []);
 
     useEffect(() => {
-    const el = horizontalRef.current;
-    if (!el) return;
+        const el = horizontalRef.current;
+        if (!el) return;
 
-    const onWheel = (e: WheelEvent) => {
-        if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
-            e.preventDefault();
-            el.scrollLeft += e.deltaY;
-        }
-    };
-    el.addEventListener("wheel", onWheel, { passive: false });
+        const onWheel = (e: WheelEvent) => {
+            if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+                e.preventDefault();
+                el.scrollLeft += e.deltaY;
+            }
+        };
+        el.addEventListener("wheel", onWheel, { passive: false });
 
-    return () => el.removeEventListener("wheel", onWheel);
-}, []);
+        return () => el.removeEventListener("wheel", onWheel);
+    }, []);
 
     return (
         <>
             <header>
                 <div>
 
-                    <div className="display-flex">
-                        <h3><Link href="/" >(주)에스원이벤트</Link></h3>
-                        <div className="mo" onClick={() => setIsOpen(true)}>
-                            <Image src="/icons/nav.png" alt="메뉴열기" width={35} height={29} />
-                        </div>
-                        <div className="pc-flex">
-                            <Link href="/about" >회사소개</Link>
-                            <Link href="/inquire" >문의하기</Link>
+                    <div>
+                        <div className="display-flex">
+                            <h3><Link href="/" >(주)에스원이벤트</Link></h3>
+                            <div className="mo" onClick={() => setIsOpen(true)}>
+                                <Image src="/icons/nav.png" alt="메뉴열기" width={35} height={29} />
+                            </div>
+                            <div className="pc-flex">
+                                <Link href="/about" >회사소개</Link>
+                                <Link href="/inquire" >문의하기</Link>
+                            </div>
                         </div>
                     </div>
 
@@ -86,7 +88,7 @@ export default function Header() {
                                 <div className="display-flex">
                                     <section>
                                         <div>
-                                            <Link href="/about"  onClick={() => setIsOpen(false)}>
+                                            <Link href="/about" onClick={() => setIsOpen(false)}>
                                                 <Image src="/icons/about.png" alt="회사소개" width={31} height={28} />
                                             </Link>
                                         </div>
@@ -94,7 +96,7 @@ export default function Header() {
                                     </section>
                                     <section>
                                         <div>
-                                            <Link href="/inquire"  onClick={() => setIsOpen(false)}>
+                                            <Link href="/inquire" onClick={() => setIsOpen(false)}>
                                                 <Image src="/icons/inquire.png" alt="문의하기" width={33} height={31} />
                                             </Link>
                                         </div>
@@ -111,9 +113,9 @@ export default function Header() {
                             </div>
                             <div>
                                 <ul className="mo">
-                                <li>대표번호 : 010-3546-9985</li>
-                                <li>충정북도 진천군 초평면 원댕이길 15, 에스원이벤트창고</li>
-                            </ul>
+                                    <li>대표번호 : 010-3546-9985</li>
+                                    <li>충정북도 진천군 초평면 원댕이길 15, 에스원이벤트창고</li>
+                                </ul>
                             </div>
                         </nav>
                     </div>
