@@ -89,7 +89,7 @@ export default function Header() {
                                     <section>
                                         <div>
                                             <Link href="/about" onClick={() => setIsOpen(false)}>
-                                                <Image src="/icons/about.png" alt="회사소개" width={31} height={28} />
+                                                <Image src="/icons/about.png" alt="회사소개" width={62} height={56} />
                                             </Link>
                                         </div>
                                         <p>회사소개</p>
@@ -97,7 +97,7 @@ export default function Header() {
                                     <section>
                                         <div>
                                             <Link href="/inquire" onClick={() => setIsOpen(false)}>
-                                                <Image src="/icons/inquire.png" alt="문의하기" width={33} height={31} />
+                                                <Image src="/icons/inquire.png" alt="문의하기" width={66} height={62} />
                                             </Link>
                                         </div>
                                         <p>문의하기</p>

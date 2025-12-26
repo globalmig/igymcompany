@@ -37,7 +37,9 @@ export default function RootLayout({
     <html lang="ko">
       <body>
         <Header />
-        {children}
+        <div className="page-contents">
+          {children}
+        </div>
         <Footer />
       </body>
     </html>
