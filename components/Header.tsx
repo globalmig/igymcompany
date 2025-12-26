@@ -132,6 +132,8 @@ export default function Header() {
                     </ul>
                 </div>
             </div>
+            <div className="white-bg" style={{display: isOpen ? "block" : "none"}}></div>
+
         </>
     )
 }

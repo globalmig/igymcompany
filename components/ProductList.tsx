@@ -4,21 +4,21 @@ import ProductItem from "./ProductItem";
 import { useParams } from "next/navigation";
 
 interface ProductListProps {
-    preview? : string,
+    preview?: string,
 }
 
 export default function ProductList({ preview }: ProductListProps) {
 
     const params = useParams();
-    const {category} = params
+    const { category } = params
     const product = category ?
         PRODUCT.filter(p => p.category === category) :
-        PRODUCT.filter(p => p.category === preview).slice(0,4);
+        PRODUCT.filter(p => p.category === preview).slice(0, 4);
     const isPreview = category ? true : false;
 
     return (
         <div className="list">
-            {product.map(p => <ProductItem key={p.id} product={p} isPreview={isPreview}/>)}
+            {product.map(p => <ProductItem key={p.id} product={p} isPreview={isPreview} />)}
         </div>
     )
 }
