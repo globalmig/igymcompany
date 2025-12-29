@@ -1,5 +1,5 @@
 import { redirect } from "next/navigation";
 
 export default function SoundPage() {
-    redirect("/sound/39")
+    redirect("/sound/40")
 }
