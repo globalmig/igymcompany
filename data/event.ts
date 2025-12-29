@@ -7,12 +7,14 @@ export const EVENT = [
             "/images/행사/제55대_취임식1.jpg",
             "/images/행사/제55대_취임식2.jpg",
             "/images/행사/제55대_취임식3.jpg",
+            "/images/행사/제55대_취임식4.jpg",
         ]
     },{
         id: 2,
-        name: "2025년 제 18회 미래지기 축제",
-        thumnail: "/images/행사/제18회_미래지기_축제1.jpg",
+        name: "2025년 생거진천 미래지기 축제",
+        thumnail: "/images/행사/제18회_미래지기_축제_thumnail.jpg",
         detail: [
+            "/images/행사/제18회_미래지기_축제1.jpg",
             "/images/행사/제18회_미래지기_축제2.jpg",
         ]
     },{
@@ -21,8 +23,12 @@ export const EVENT = [
         thumnail: "/images/행사/제46회_대동문_체육대회_thumnail.jpg",
     },{
         id: 4,
-        name: "2025년 진천국 DREAM_FASTIVAL 행사",
-        thumnail: "/images/행사/DREAM_FASTIVAL1.jpg",
+        name: "2025년 진천군 DREAM_FASTIVAL 행사",
+        thumnail: "/images/행사/DREAM_FASTIVAL_thumnail.jpg",
+        detail: [
+            "/images/행사/DREAM_FASTIVAL1.jpg",
+            "/images/행사/DREAM_FASTIVAL_thumnail.jpg",
+        ]
     },{
         id: 5,
         name: "제 25회 진천군자율 방범연합대 한마음 대회",
@@ -84,6 +90,7 @@ export const EVENT = [
         thumnail: "/images/행사/제17회_어린이날잔치_thumnail.jpg",
         detail: [
             "/images/행사/제17회_어린이날잔치1.jpg",
+            "/images/행사/제17회_어린이날잔치2.jpg",
         ]
     },{
         id: 13,

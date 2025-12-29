@@ -76,7 +76,8 @@ export default function HomePage() {
             <h2>PRODUCT PREVIEW</h2>
           </div>
           <div>
-            <ProductPreview name="에어바운스" category="airbounce" />
+            <ProductPreview name="조립식무대/트러스" category="truss" />
+            <ProductPreview name="천막/테이블/의자/행사용품" category="rental" />
             <ProductPreview name="워터슬라이드" category="waterslide" />
             <ProductPreview name="놀이기구" category="amusement" />
             <ProductPreview name="체험놀이" category="experience" />

@@ -94,6 +94,16 @@ button {
     display: none;
 }
 
+.white-bg {
+    position: fixed;
+    z-index: 20;
+    top: 0;
+    left: 0;
+    background-color: white;
+    width: 100%;
+    height: 100vh;
+}
+
 article>div {
     padding: 80px 5%;
 }
@@ -190,7 +200,7 @@ header>div>:last-child.open {
     display: block;
 }
 
-header>div>:last-child.open > nav {
+header>div>:last-child.open>nav {
     padding: 15px 5%;
 }
 
@@ -436,7 +446,7 @@ footer>div>:first-child>div {
 }
 
 footer>div>:first-child>div img {
-    width: 60px;
+    width: 50px;
     height: auto;
 }
 
@@ -528,7 +538,7 @@ footer>div>:last-child>p {
     }
 
     header>div>:first-child>div {
-        width: 1200px;
+        width: 1336px;
         margin: 0 auto;
         position: relative;
     }
@@ -565,7 +575,7 @@ footer>div>:last-child>p {
     }
 
     .menu-sticky>div {
-        width: 1200px;
+        width: 1366px;
         margin: 0 auto;
         overflow-x: visible;
     }
@@ -584,7 +594,7 @@ footer>div>:last-child>p {
 
     header>div>:last-child {
         position: unset;
-        width: 1200px;
+        width: 1336px;
         margin: 0 auto;
         display: block;
         height: auto;
@@ -597,7 +607,7 @@ footer>div>:last-child>p {
     }
 
     nav>ul li {
-        width: 125px;
+        width: 140px;
     }
 
     nav>ul li.on {
@@ -691,6 +701,10 @@ footer>div>:last-child>p {
     footer>div>:first-child {
         right: 10%;
         bottom: 100px;
+    }
+
+    footer>div>:first-child>div img {
+        width: 60px;
     }
 
     footer>div>:last-child>:first-child button a {

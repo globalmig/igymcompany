@@ -17,6 +17,14 @@ export const PRODUCT = [
             "/images/트러스/트러스6.jpg",
             "/images/트러스/트러스7.jpg",
             "/images/트러스/트러스8.jpg",
+            "/images/트러스/트러스9.jpg",
+            "/images/트러스/트러스10.jpg",
+            "/images/트러스/트러스11.jpg",
+            "/images/트러스/트러스12.jpg",
+            "/images/트러스/트러스13.jpg",
+            "/images/트러스/트러스14.jpg",
+            "/images/트러스/트러스15.jpg",
+            "/images/트러스/트러스16.jpg",
         ]
     },
     {
@@ -45,6 +53,8 @@ export const PRODUCT = [
             "/images/행사용품렌탈/몽골천막1.jpg",
             "/images/행사용품렌탈/몽골천막2.jpg",
             "/images/행사용품렌탈/몽골천막3.jpg",
+            "/images/행사용품렌탈/몽골천막4.jpg",
+            "/images/행사용품렌탈/몽골천막5.jpg",
         ]
     }, {
         id: 4,
@@ -59,6 +69,13 @@ export const PRODUCT = [
             "/images/행사용품렌탈/캐노피천막1.jpg",
             "/images/행사용품렌탈/캐노피천막2.jpg",
             "/images/행사용품렌탈/캐노피천막3.jpg",
+            "/images/행사용품렌탈/캐노피천막4.jpg",
+            "/images/행사용품렌탈/캐노피천막5.jpg",
+            "/images/행사용품렌탈/캐노피천막6.jpg",
+            "/images/행사용품렌탈/캐노피천막7.jpg",
+            "/images/행사용품렌탈/캐노피천막8.jpg",
+            "/images/행사용품렌탈/캐노피천막9.jpg",
+            "/images/행사용품렌탈/캐노피천막10.jpg",
         ]
     },
     {
@@ -196,6 +213,18 @@ export const PRODUCT = [
         ]
     }, {
         id: 14,
+        name: "장애물 에어바운스",
+        category: "airbounce",
+        thumnail: "/images/에어바운스/장애물2.jpg",
+        size: "3M * 10M 사이즈",
+        detail: [
+            "/images/에어바운스/장애물1.jpg",
+            "/images/에어바운스/장애물3.jpg",
+            "/images/에어바운스/장애물4.jpg",
+            "/images/에어바운스/장애물5.jpg",
+        ]
+    }, {
+        id: 15,
         name: "마리오 에어바운스",
         category: "airbounce",
         thumnail: "/images/에어바운스/마리오_thumnail.jpg",
@@ -207,7 +236,7 @@ export const PRODUCT = [
             "/images/에어바운스/마리오4.jpg",
         ]
     }, {
-        id: 15,
+        id: 16,
         name: "타요버스 에어바운스",
         category: "airbounce",
         thumnail: "/images/에어바운스/타요버스_thumnail.jpg",
@@ -222,7 +251,7 @@ export const PRODUCT = [
             "/images/에어바운스/타요버스4.jpg",
         ]
     }, {
-        id: 16,
+        id: 17,
         name: "우주선 워터슬라이드",
         category: "waterslide",
         thumnail: "/images/워터슬라이드/우주선_thumnail.jpg",
@@ -236,7 +265,7 @@ export const PRODUCT = [
             "/images/워터슬라이드/우주선3.jpg",
         ]
     }, {
-        id: 17,
+        id: 18,
         name: "무지개 워터슬라이드",
         category: "waterslide",
         thumnail: "/images/워터슬라이드/무지개_thumnail.jpg",
@@ -252,7 +281,7 @@ export const PRODUCT = [
             "/images/워터슬라이드/공통5.jpg",
         ]
     }, {
-        id: 18,
+        id: 19,
         name: "히어로 워터슬라이드",
         category: "waterslide",
         thumnail: "/images/워터슬라이드/히어로_thumnail.jpg",
@@ -266,7 +295,7 @@ export const PRODUCT = [
             "/images/워터슬라이드/공통5.jpg",
         ]
     }, {
-        id: 19,
+        id: 20,
         name: "야자수 워터슬라이드",
         category: "waterslide",
         thumnail: "/images/워터슬라이드/야자수1.jpg",
@@ -280,7 +309,7 @@ export const PRODUCT = [
             "/images/워터슬라이드/아이스크림3.jpg",
         ]
     }, {
-        id: 20,
+        id: 21,
         name: "아이스크림 워터슬라이드 (대형)",
         category: "waterslide",
         thumnail: "/images/워터슬라이드/아이스크림_thumnail.jpg",
@@ -296,7 +325,7 @@ export const PRODUCT = [
             "/images/워터슬라이드/공통2.jpg",
         ]
     }, {
-        id: 21,
+        id: 22,
         name: "아이스크림 워터슬라이드 (중소형)",
         category: "waterslide",
         thumnail: "/images/워터슬라이드/아이스크림(중소)1.jpg",
@@ -308,7 +337,7 @@ export const PRODUCT = [
             "/images/워터슬라이드/아이스크림(중소)1.jpg",
         ]
     }, {
-        id: 22,
+        id: 23,
         name: "고양이 워터슬라이드",
         category: "waterslide",
         thumnail: "/images/워터슬라이드/고양이_thumnail.jpg",
@@ -321,7 +350,7 @@ export const PRODUCT = [
             "/images/워터슬라이드/공통4.jpg",
         ]
     }, {
-        id: 23,
+        id: 24,
         name: "하마 워터슬라이드",
         category: "waterslide",
         thumnail: "/images/워터슬라이드/하마_thumnail.jpg",
@@ -333,7 +362,7 @@ export const PRODUCT = [
             "/images/워터슬라이드/하마1.jpg",
         ]
     }, {
-        id: 24,
+        id: 25,
         name: "대형 트램펄린",
         category: "amusement",
         thumnail: "/images/놀이기구/트램펄린_thumnail.jpg",
@@ -350,7 +379,7 @@ export const PRODUCT = [
             "/images/놀이기구/트램펄린4.jpg",
         ]
     }, {
-        id: 25,
+        id: 26,
         name: "레일기차",
         category: "amusement",
         thumnail: "/images/놀이기구/레일기차_thumnail.jpg",
@@ -367,7 +396,7 @@ export const PRODUCT = [
             "/images/놀이기구/레일기차4.jpg",
         ]
     }, {
-        id: 26,
+        id: 27,
         name: "스프링말",
         category: "amusement",
         thumnail: "/images/놀이기구/스프링말_thumnail.jpg",
@@ -383,7 +412,7 @@ export const PRODUCT = [
             "/images/놀이기구/스프링말3.jpg",
         ]
     }, {
-        id: 27,
+        id: 28,
         name: "키드라이더",
         category: "amusement",
         thumnail: "/images/놀이기구/키드라이더_thumnail.jpg",
@@ -400,7 +429,7 @@ export const PRODUCT = [
             "/images/놀이기구/키드라이더4.jpg",
         ]
     }, {
-        id: 28,
+        id: 29,
         name: "회전라이더",
         category: "amusement",
         thumnail: "/images/놀이기구/회전라이더_thumnail.jpg",
@@ -417,7 +446,7 @@ export const PRODUCT = [
             "/images/놀이기구/회전라이더4.jpg",
         ]
     }, {
-        id: 29,
+        id: 30,
         name: "놀이동산",
         category: "experience",
         thumnail: "/images/체험놀이/놀이동산_thumnail.jpg",
@@ -434,7 +463,7 @@ export const PRODUCT = [
             "/images/체험놀이/놀이동산4.jpg",
         ]
     }, {
-        id: 30,
+        id: 31,
         name: "레트로",
         category: "experience",
         thumnail: "/images/체험놀이/레트로_thumnail.jpg",
@@ -454,7 +483,7 @@ export const PRODUCT = [
             "/images/체험놀이/레트로5.jpg",
         ]
     }, {
-        id: 31,
+        id: 32,
         name: "민속놀이",
         category: "experience",
         thumnail: "/images/체험놀이/민속놀이_thumnail.jpg",
@@ -476,7 +505,7 @@ export const PRODUCT = [
             "/images/체험놀이/민속놀이8.jpg",
         ]
     }, {
-        id: 32,
+        id: 33,
         name: "볼풀장",
         category: "experience",
         thumnail: "/images/체험놀이/볼풀장_thumnail.jpg",
@@ -491,7 +520,7 @@ export const PRODUCT = [
             "/images/체험놀이/볼풀장2.jpg",
         ]
     }, {
-        id: 33,
+        id: 34,
         name: "블루데이",
         category: "experience",
         thumnail: "/images/체험놀이/블루데이_thumnail.jpg",
@@ -511,7 +540,7 @@ export const PRODUCT = [
             "/images/체험놀이/블루데이5.jpg",
         ]
     }, {
-        id: 34,
+        id: 35,
         name: "스노우",
         category: "experience",
         thumnail: "/images/체험놀이/스노우_thumnail.jpg",
@@ -529,7 +558,7 @@ export const PRODUCT = [
             "/images/체험놀이/스노우4.jpg",
         ]
     }, {
-        id: 35,
+        id: 36,
         name: "옐로우 데이",
         category: "experience",
         thumnail: "/images/체험놀이/옐로우데이_thumnail.jpg",
@@ -546,7 +575,7 @@ export const PRODUCT = [
             "/images/체험놀이/옐로우데이3.jpg",
         ]
     }, {
-        id: 36,
+        id: 37,
         name: "찜질방",
         category: "experience",
         thumnail: "/images/체험놀이/찜질방_thumnail.jpg",
@@ -564,7 +593,7 @@ export const PRODUCT = [
             "/images/체험놀이/찜질방4.jpg",
         ]
     }, {
-        id: 37,
+        id: 38,
         name: "카트체험",
         category: "experience",
         thumnail: "/images/체험놀이/카트_thumnail.jpg",
@@ -579,7 +608,7 @@ export const PRODUCT = [
             "/images/체험놀이/카트4.jpg",
         ]
     }, {
-        id: 38,
+        id: 39,
         name: "편백&빅블록",
         category: "experience",
         thumnail: "/images/체험놀이/편백_thumnail.jpg",
@@ -597,7 +626,7 @@ export const PRODUCT = [
             "/images/체험놀이/편백4.jpg",
         ]
     },{
-        id: 39,
+        id: 40,
         name: "음향 시스템",
         category: "sound",
         thumnail: "/images/행사용품렌탈/음향1.jpg",

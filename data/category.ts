@@ -9,6 +9,12 @@ export const CATEGORY_MAP: { [key: string]: { title: string; icon?: string, bann
         banner: "/images/inquire_banner.jpg",
         menu_img: "",
     },
+    event: {
+        title: '공식행사/지역축제',
+        icon: "/icons/category_event.png",
+        banner: "/images/event_banner.jpg",
+        menu_img: "/images/공식행사메뉴.jpg",
+    },
     truss: {
         title: '조립식무대/트러스',
         icon: "/icons/category_truss.png",
@@ -22,7 +28,7 @@ export const CATEGORY_MAP: { [key: string]: { title: string; icon?: string, bann
         menu_img: "/images/음향메뉴.jpg",
     },
     rental: {
-        title: '행사 용품 렌탈',
+        title: '천막/테이블/의자/행사용품',
         icon: "/icons/category_rental.png",
         banner: "/images/rental_banner.jpg",
         menu_img: "/images/렌탈메뉴.jpg",
@@ -38,12 +44,6 @@ export const CATEGORY_MAP: { [key: string]: { title: string; icon?: string, bann
         //     { name: "놀이터 에어바운스", url: "playground",},
         //     { name: "챌린지 에어바운스", url: "challenge",},
         // ],
-    },
-    event: {
-        title: '공식행사',
-        icon: "/icons/category_event.png",
-        banner: "/images/event_banner.jpg",
-        menu_img: "/images/공식행사메뉴.jpg",
     },
     waterslide: {
         title: '워터슬라이드',
