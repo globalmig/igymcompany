@@ -144,6 +144,13 @@ header>div>:first-child>div>:nth-child(2) img {
     border-bottom: 1px solid #eee;
 }
 
+.menu-sticky.show {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
 .menu-sticky>div {
     overflow-x: auto;
     overflow-y: hidden;
