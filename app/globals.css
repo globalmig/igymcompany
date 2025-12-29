@@ -257,8 +257,7 @@ nav>ul li p {
     border-radius: 50px;
     background-color: #eee;
     color: #555;
-    font-size: 0.75em;
-    white-space: nowrap;
+    font-size: 0.5em;
     text-align: center;
 }
 
@@ -623,7 +622,7 @@ footer>div>:last-child>p {
 
     nav>ul li p {
         padding: 8px 5px;
-        font-size: 0.9rem;
+        font-size: 0.7rem;
     }
 
     nav>:last-child {

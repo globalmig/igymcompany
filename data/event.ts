@@ -60,12 +60,7 @@ export const EVENT = [
             "/images/행사/2024년_목재페스티벌6.jpg",
             "/images/행사/2024년_목재페스티벌7.jpg",
             "/images/행사/2024년_목재페스티벌8.jpg",
-        ]
-    },{
-        id: 9,
-        name: "2024년 한밭수목원 가을꽃 축제",
-        thumnail: "/images/행사/2024년_한밭수목원1.jpg",
-        detail: [
+            "/images/행사/2024년_한밭수목원1.jpg",
             "/images/행사/2024년_한밭수목원2.jpg",
             "/images/행사/2024년_한밭수목원3.jpg",
             "/images/행사/2024년_한밭수목원4.jpg",

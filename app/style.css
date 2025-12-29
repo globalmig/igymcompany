@@ -963,6 +963,11 @@
         padding: 3px 25px;
     }
 
+    .event>div>:last-child {
+        justify-content: left;
+        gap: 0px 30px;
+    }
+
     .event-item {
         margin: 20px 0;
         width: 380px;
