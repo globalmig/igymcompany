@@ -24,10 +24,12 @@ export default function Detail() {
                         <Image src={detail.thumnail} alt={detail.name} width={1000} height={619} />
                     </div>
                     <h2>{detail.name}</h2>
+                    {detail.category !== "sound" && detail.category !== "rental" ?
                     <div>
                         <p><span>SIZE</span> {detail.size}</p>
                         <button><Link href="/inquire">문의하기</Link></button>
-                    </div>
+                    </div> : <div style={{display: "none"}}></div>
+                    }
                     {detail.contents &&
                     <ul>
                         {detail.contents.map((c, index) => <li key={index}>{c}</li>)}

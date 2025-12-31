@@ -35,7 +35,7 @@ export const PRODUCT = [
         contents: [
             "내구성 좋은 상판과 튼튼한 프레임으로 제작된 1800사이즈의 기본 행사용 테이블입니다.",
         ],
-        size: "1800",
+        // size: "1800",
         detail: [
             "/images/행사용품렌탈/듀라테이블1.jpg",
             "/images/행사용품렌탈/듀라테이블2.jpg",
@@ -48,13 +48,12 @@ export const PRODUCT = [
         contents: [
             "행사 전반의 안정감과 전문성을 높여주는 기본형 천막입니다. 차광&방수 기능이 우수하며 비와 햇빛을 동시에 차단해주고 안전하게 고정해 설치 및 철수해드리고 있습니다.",
         ],
-        size: "3m*3m, 5m*5m 선택가능",
+        // size: "3m*3m, 5m*5m 선택가능",
         detail: [
             "/images/행사용품렌탈/몽골천막1.jpg",
             "/images/행사용품렌탈/몽골천막2.jpg",
             "/images/행사용품렌탈/몽골천막3.jpg",
             "/images/행사용품렌탈/몽골천막4.jpg",
-            "/images/행사용품렌탈/몽골천막5.jpg",
         ]
     }, {
         id: 4,
@@ -64,13 +63,14 @@ export const PRODUCT = [
         contents: [
             "행사 전반의 안정감과 전문성을 높여주는 기본형 천막입니다. 차광&방수 기능이 우수하며 비와 햇빛을 동시에 차단해주고 안전하게 고정해 설치 및 철수해드리고 있습니다.",
         ],
-        size: "1800",
+        //size: "1800",
         detail: [
             "/images/행사용품렌탈/캐노피천막1.jpg",
             "/images/행사용품렌탈/캐노피천막2.jpg",
             "/images/행사용품렌탈/캐노피천막3.jpg",
             "/images/행사용품렌탈/캐노피천막4.jpg",
             "/images/행사용품렌탈/캐노피천막5.jpg",
+            "/images/행사용품렌탈/캐노피천막11.jpg",
             "/images/행사용품렌탈/캐노피천막6.jpg",
             "/images/행사용품렌탈/캐노피천막7.jpg",
             "/images/행사용품렌탈/캐노피천막8.jpg",
@@ -86,7 +86,7 @@ export const PRODUCT = [
         contents: [
             "가벼운 무게의 플라스틱 재질에 팔걸이가 있어 편안함과 안정감을 갖춘 기본 행사용 의자입니다.",
         ],
-        size: "별도 문의",
+        // size: "별도 문의",
         detail: [
             "/images/행사용품렌탈/팔걸이의자1.jpg",
             "/images/행사용품렌탈/팔걸이의자2.jpg",
@@ -101,7 +101,7 @@ export const PRODUCT = [
         intro: [
             "5세~성인까지 체험가능"
         ],
-        size: "5M * 4M * 3M 사이즈",
+        size: "20M * 5M 사이즈",
         detail: [
             "/images/에어바운스/챌린지1.jpg",
             "/images/에어바운스/챌린지2.jpg",
@@ -251,6 +251,36 @@ export const PRODUCT = [
             "/images/에어바운스/타요버스4.jpg",
         ]
     }, {
+        id: 41,
+        name: "캐슬 에어바운스",
+        category: "airbounce",
+        thumnail: "/images/에어바운스/캐슬_thumnail.jpg",
+        intro: [
+            "동시 수용 인원 15~20명"
+        ],
+        size: "5M * 5M 중대형 사이즈",
+        detail: [
+            "/images/에어바운스/캐슬1.jpg",
+            "/images/에어바운스/캐슬2.jpg",
+            "/images/에어바운스/캐슬_thumnail.jpg",
+            "/images/에어바운스/캐슬3.jpg",
+        ]
+    }, {
+        id: 42,
+        name: "캐슬 에어바운스 (대형)",
+        category: "airbounce",
+        thumnail: "/images/에어바운스/캐슬(대)_thumnail.jpg",
+        intro: [
+            "동시 수용 인원 15~20명"
+        ],
+        size: "8M * 8M 대형 사이즈",
+        detail: [
+            "/images/에어바운스/캐슬(대)1.jpg",
+            "/images/에어바운스/캐슬(대)2.jpg",
+            "/images/에어바운스/캐슬(대)3.jpg",
+            "/images/에어바운스/캐슬(대)4.jpg",
+        ]
+    }, {
         id: 17,
         name: "우주선 워터슬라이드",
         category: "waterslide",
@@ -328,13 +358,15 @@ export const PRODUCT = [
         id: 22,
         name: "아이스크림 워터슬라이드 (중소형)",
         category: "waterslide",
-        thumnail: "/images/워터슬라이드/아이스크림(중소)1.jpg",
+        thumnail: "/images/워터슬라이드/아이스크림(중소)_thumnail.jpg",
         intro: [
             "+ 5M * 5M 에어풀장",
         ],
         size: "4M * 3M * 4.8M",
         detail: [
             "/images/워터슬라이드/아이스크림(중소)1.jpg",
+            "/images/워터슬라이드/아이스크림(중소)2.jpg",
+            "/images/워터슬라이드/아이스크림(중소)3.jpg",
         ]
     }, {
         id: 23,
@@ -466,7 +498,7 @@ export const PRODUCT = [
         id: 31,
         name: "레트로",
         category: "experience",
-        thumnail: "/images/체험놀이/레트로_thumnail.jpg",
+        thumnail: "/images/체험놀이/레트로2.jpg",
         intro: [
             "과거의 소중한 기억을 떠올리는 문화 체험",
         ],
@@ -480,6 +512,7 @@ export const PRODUCT = [
             "/images/체험놀이/레트로3.jpg",
             "/images/체험놀이/레트로4.jpg",
             "/images/체험놀이/레트로6.jpg",
+            "/images/체험놀이/레트로_thumnail.jpg",
             "/images/체험놀이/레트로5.jpg",
         ]
     }, {
@@ -630,8 +663,8 @@ export const PRODUCT = [
         name: "음향 시스템",
         category: "sound",
         thumnail: "/images/행사용품렌탈/음향1.jpg",
-        intro: [
-            "자연의 향기 속 체험 활동",
+        contents: [
+            "스피치행사, 가요제, 밴드공연, 행사규모에 적합한 음향시스템 지원 설치"
         ],
         size: "별도 문의",
         detail: [

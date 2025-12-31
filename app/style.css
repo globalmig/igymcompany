@@ -323,14 +323,15 @@
 }
 
 .detail>div>:first-child>h2 {
-    margin: 50px 0 20px;
+    margin: 50px 0 0px;
     text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #aaa;
 }
 
 .detail>div>:first-child>div:last-of-type {
     text-align: center;
     padding: 8px 0;
-    border-top: 1px solid #aaa;
     border-bottom: 1px solid #aaa;
     margin-bottom: 40px;
 }
@@ -359,7 +360,7 @@
 
 .detail>div>:first-child>ul {
     text-align: center;
-    margin-bottom: 40px;
+    margin-top: 40px;
 }
 
 .detail>div>:first-child>ul li {
@@ -368,6 +369,10 @@
 
 .detail>div>:last-child>div {
     margin: 20px 0;
+}
+
+.detail>div>:last-child>div:first-of-type {
+    margin-top: 40px;
 }
 
 .detail>div>:last-child>div img {
@@ -897,7 +902,7 @@
 
     .detail>div>:first-child>h2 {
         font-size: 2.5rem;
-        margin: 80px 0 30px;
+        margin: 80px 0 0px;
     }
 
     .detail>div>:first-child>div:last-of-type {
@@ -908,9 +913,9 @@
     .detail>div>:first-child>div:last-of-type p span {
         margin-right: 15px;
     }
-
+    
     .detail>div>:first-child>ul {
-        margin-bottom: 70px;
+        margin-top: 70px;
     }
 
     .detail>div>:first-child>ul li {
@@ -920,6 +925,10 @@
     .detail>div>:last-child>div {
         width: 1000px;
         margin: 40px auto;
+    }
+
+    .detail>div>:last-child>div:first-of-type {
+        margin-top: 70px;
     }
 
     .detail>div>:last-child>div img {

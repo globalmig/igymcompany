@@ -19,7 +19,7 @@ export const EVENT = [
         ]
     },{
         id: 3,
-        name: "진천증학교 제46회 대동문 체육대회",
+        name: "진천중학교 제46회 대동문 체육대회",
         thumnail: "/images/행사/제46회_대동문_체육대회_thumnail.jpg",
     },{
         id: 4,
@@ -31,10 +31,10 @@ export const EVENT = [
         ]
     },{
         id: 5,
-        name: "제 25회 진천군자율 방범연합대 한마음 대회",
-        thumnail: "/images/행사/제25회_한마음대회_thumnail.jpg",
+        name: "제24회 진천군 자율방범연합대 한마음 대회",
+        thumnail: "/images/행사/제24회_한마음대회_thumnail.jpg",
         detail: [
-            "/images/행사/제25회_한마음대회1.jpg",
+            "/images/행사/제24회_한마음대회1.jpg",
         ]
     },{
         id: 6,

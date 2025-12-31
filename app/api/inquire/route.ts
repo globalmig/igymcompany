@@ -61,7 +61,7 @@ export async function POST(req: Request) {
         return NextResponse.json({ success: true, sendResult });
 
     } catch (error: any) {
-        console.error("MMS 발송 실패:", error);
+        console.error("발송 실패:", error);
         return NextResponse.json({ success: false, error: error.message });
     }
 }
