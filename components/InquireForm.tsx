@@ -128,8 +128,8 @@ export default function InquireForm() {
         <>
             <form onSubmit={onSubmitForm}>
                 <div>
-                    <label htmlFor="name"><h3 className="required">원명 또는 기관명</h3></label>
-                    <input type="text" id="name" name="name" placeholder="성함을 입력해주세요." onChange={onChangeForm} value={form.name} />
+                    <label htmlFor="name"><h3 className="required">기관명</h3></label>
+                    <input type="text" id="name" name="name" placeholder="기관명을 입력해주세요." onChange={onChangeForm} value={form.name} />
                 </div>
 
                 <div>
@@ -150,7 +150,7 @@ export default function InquireForm() {
 
                 <div>
                     <label htmlFor="contents"><h3>문의 내용</h3></label>
-                    <textarea id="contents" name="contents" rows={7} placeholder="공사 요청사항을 입력해주세요." onChange={onChangeForm} value={form.contents} />
+                    <textarea id="contents" name="contents" rows={7} placeholder="문의 내용을 입력해주세요." onChange={onChangeForm} value={form.contents} />
                 </div>
 
                 <div>
@@ -165,7 +165,7 @@ export default function InquireForm() {
                     <div>
                         <p>아래의 개인 정보를 수집하며, 상담 외 다른 목적으로 사용되지 않습니다.</p>
                         <ul>
-                            <li>- 수집 항목 : 행사명(단체명, 행사장소), 이름, 연락처, 문의 내용</li>
+                            <li>- 수집 항목 : 기관명, 연락처, 행사일자, 문의 내용</li>
                             <li>- 수집 및 이용 목적 : 문의 상담 및 고객 응대</li>
                             <li>- 보유 기간 : 문의일로부터 1년간 보관 후 즉시 파기</li>
                             <li>- 수집 방법 : 홈페이지 문의 접수</li>

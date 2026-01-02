@@ -60,7 +60,7 @@ export const CATEGORY_MAP: { [key: string]: { title: string; icon?: string, bann
         title: '놀이기구',
         icon: "/icons/category_amusement.png",
         banner: "/images/놀이기구/banner.jpg",
-        menu_img: "/images/놀이기구메뉴.jpg",
+        menu_img: "/images/체험놀이메뉴.jpg",
     },
     sports_competition: {
         title: '체육대회',
@@ -72,7 +72,7 @@ export const CATEGORY_MAP: { [key: string]: { title: string; icon?: string, bann
         title: '체험놀이',
         icon: "/icons/category_experience.png",
         banner: "/images/체험놀이/banner.jpg",
-        menu_img: "/images/체험놀이메뉴.jpg",
+        menu_img: "/images/놀이기구메뉴.jpg",
         // categories: [
         //     { name: "캐릭터 에어바운스", url: "character",},
         //     { name: "스포츠 에어바운스", url: "sports",},

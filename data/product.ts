@@ -669,6 +669,8 @@ export const PRODUCT = [
         size: "별도 문의",
         detail: [
             "/images/행사용품렌탈/음향2.jpg",
+             "/images/행사용품렌탈/음향3.jpg",
+              "/images/행사용품렌탈/음향4.jpg",
         ]
     },
 ]

@@ -1,5 +1,10 @@
 export const EVENT = [
     {
+        id: 16,
+        name: "2026년 병오년 신년참배",
+        thumnail: "/images/행사/병오년_신년참배_thumnail.jpg",
+    },
+    {
         id: 1,
         name: "2025년 진천청년회의소 제 55대 회장·회장단·감사 이취임식",
         thumnail: "/images/행사/제55대_취임식1.jpg",
@@ -65,14 +70,20 @@ export const EVENT = [
             "/images/행사/2024년_한밭수목원3.jpg",
             "/images/행사/2024년_한밭수목원4.jpg",
         ]
-    },{
+    },
+    {
+        // id: 10,
+        // name: "2024년 진천청년회의소 제 54대 회장·회장단·감사 이취임식",
+        // thumnail: "/images/행사/제54대_취임식1.jpg",
+        // detail: [
+        //     "/images/행사/제54대_취임식2.jpg",
+        // ]
         id: 10,
-        name: "2024년 진천청년회의소 제 54대 회장·회장단·감사 이취임식",
-        thumnail: "/images/행사/제54대_취임식1.jpg",
-        detail: [
-            "/images/행사/제54대_취임식2.jpg",
-        ]
-    },{
+        name: "제 1회 동국제약 생산본부 복면가요제",
+        thumnail: "/images/행사/동국제약_thumnail.jpg",
+    
+    },
+    {
         id: 11,
         name: "2024년 제 17회 미래지기 축제",
         thumnail: "/images/행사/제17회_미래지기_축제1.jpg",

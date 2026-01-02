@@ -4,7 +4,6 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 export default function CategoryBanner() {
-
     const pathname = usePathname(); // ex: /about
     const pathnameSplit = pathname.split('/').filter(Boolean);
     const category = CATEGORY_MAP[pathnameSplit[0]];

@@ -41,7 +41,7 @@ export async function POST(req: Request) {
         const message = `
 [문의 접수]
 
-원명 또는 기관명: ${name}
+기관명: ${name}
 담당자 번호: ${phoneFront}-${phoneMiddle}-${phoneLast}
 행사 일자: ${date}
 문의 내용: ${contents}
