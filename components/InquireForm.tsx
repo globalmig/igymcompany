@@ -114,8 +114,6 @@ export default function InquireForm() {
                 window.location.reload();
             } else {
                 alert("문자 발송 중 오류가 발생했습니다.");
-                const data = await response.json();
-                console.log("API response:", data);
             }
         } catch (error) {
             console.error(error);
