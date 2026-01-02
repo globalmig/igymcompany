@@ -63,7 +63,7 @@ export default function InquireForm() {
             return;
         }
 
-        if(!form.date.trim()) {
+        if (!form.date.trim()) {
             alert("행사 일자를 선택해주세요.");
         }
 
@@ -114,14 +114,13 @@ export default function InquireForm() {
                 window.location.reload();
             } else {
                 alert("문자 발송 중 오류가 발생했습니다.");
-                console.error;
+                const data = await response.json();
+                console.log("API response:", data);
             }
         } catch (error) {
             console.error(error);
             alert("서버 오류가 발생했습니다. 다시 시도해주세요.");
         }
-
-        console.log(form)
 
     }, [form]);
 
