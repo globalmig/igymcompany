@@ -10,11 +10,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: '(주)에스원이벤트',
     description: '전문적인 기업, 어린이 행사 기획 및 운영 솔루션',
-    url: 'https://www..com',
+    url: 'https://s-one-event.co.kr',
     siteName: '(주)에스원이벤트',
     images: [
       {
-        url: 'https://www..com/images/og_image.png',
+        url: 'https://s-one-event.co.kr/images/og_image.png',
         width: 1200,
         height: 630,
         alt: '(주)에스원이벤트',
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     type: 'website',
   },
   other: {
-    'naver-site-verification': '',
+    'naver-site-verification': '941ce04bd18c83544356b847ca1cbb5d60e778b6',
   }
 };
 

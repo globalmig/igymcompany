@@ -4,4 +4,4 @@ Disallow: /inquire
 User-agent: Yeti
 Disallow: /inquire
 
-Sitemap: https://www..com//sitemap.xml
+Sitemap: https://s-one-event.co.kr/sitemap.xml
