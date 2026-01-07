@@ -33,7 +33,7 @@ export default function Footer() {
                         <li className="line">사업자번호 : 723-87-02984</li>
                         <li>대표자 : 최석현</li>
                         <li className="line">대표번호 :  010-3546-9985</li>
-                        <li>주소 : 충정북도 진천군 초평면 원댕이길 15, 에스원이벤트창고</li>
+                        <li>주소 : 충북 진천군 초평면 원댕이길 15번지 1층 (에스원이벤트)</li>
                     </ul>
                     <p>@2025 (주)에스원이벤트. All rights reserved.</p>
                 </div>

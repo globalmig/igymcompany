@@ -42,11 +42,13 @@ export default function HomePage() {
               data-aos-duration="1000"
               data-aos-once="true"
             >(주)에스원이벤트와 함께</h3>
-            <h1 data-aos="fade-up"
+            <div data-aos="fade-up"
               data-aos-easing="ease-out"
               data-aos-duration="1000"
-              data-aos-once="true"
-            >행사가 더 즐거워집니다.</h1>
+              data-aos-once="true">
+              <h1>행사가 더 즐거워집니다.</h1>
+            <h3>행사문의 : 010-3546-9985 / 카카오톡 ID : event.9985</h3>
+            </div>
             <div className="scroll">
               <div className="mouse_scroll">
                 <span></span>
