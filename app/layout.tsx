@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     siteName: '(주)에스원이벤트',
     images: [
       {
-        url: 'https://s-one-event.co.kr/images/og_image.png',
+        url: 'https://s-one-event.co.kr/images/og_image.jpg',
         width: 1200,
         height: 630,
         alt: '(주)에스원이벤트',
