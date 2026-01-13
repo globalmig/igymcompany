@@ -16,7 +16,7 @@ export default function ProductPreview({ name, category }: ProductPreviewProps) 
                 <h3>{name}</h3>
                 <button className="display-flex">
                     <Link href={`/${category}`}>더보기</Link>
-                    <Image src="/icons/more.png" alt="더보기" width={25} height={45} />
+                    <Image src="/icons/more.png" alt={`${name} 자세히 보기`} width={25} height={45} />
                 </button>
             </div>
             <ProductList preview={category}/>

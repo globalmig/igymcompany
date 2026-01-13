@@ -29,12 +29,12 @@ xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
     <priority>0.9</priority>
 </url>
 <url>
-    <loc>https://s-one-event.co.kr/truss</loc>
+    <loc>https://s-one-event.co.kr/truss/1</loc>
     <lastmod>2026-01-06</lastmod>
     <priority>0.8</priority>
 </url>
 <url>
-    <loc>https://s-one-event.co.kr/sound</loc>
+    <loc>https://s-one-event.co.kr/sound/40</loc>
     <lastmod>2026-01-06</lastmod>
     <priority>0.8</priority>
 </url>

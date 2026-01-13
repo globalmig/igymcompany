@@ -54,7 +54,7 @@ export default function Header() {
 
                     <div>
                         <div className="display-flex">
-                            <h3><Link href="/" >(주)에스원이벤트</Link></h3>
+                            <h3><Link href="/" >에스원이벤트</Link></h3>
                             <div className="mo" onClick={() => setIsOpen(true)}>
                                 <Image src="/icons/nav.png" alt="메뉴열기" width={35} height={29} />
                             </div>
