@@ -10,9 +10,9 @@
   },
   "dependencies": {
     "aos": "^3.0.0-beta.6",
-    "next": "16.0.10",
-    "react": "19.2.1",
-    "react-dom": "19.2.1",
+    "next": "^16.1.1",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
     "react-slick": "^0.31.0",
     "slick-carousel": "^1.8.1",
     "solapi": "^5.5.3"

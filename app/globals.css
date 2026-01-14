@@ -361,7 +361,7 @@ main>div>:last-child {
     color: white;
 }
 
-main>div>:last-child h1 {
+main>div>:last-child h2 {
     font-family: "SB_L";
     font-size: 2.5rem;
 }
@@ -672,11 +672,11 @@ footer>div>:last-child>p {
         top: 65%;
     }
 
-    main>div>:last-child h1 {
+    main>div>:last-child h2 {
         font-size: 3rem;
     }
 
-    main.main-home>div>:last-child h1 {
+    main.main-home>div>:last-child h2 {
         font-size: 3rem;
     }
 

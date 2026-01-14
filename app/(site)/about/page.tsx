@@ -11,7 +11,7 @@ export default function AboutPage() {
 
                 <div>
                     <section>
-                        <h1>2024</h1>
+                        <h2>2024</h2>
                         <ul>
                             <li>삼성 SDI 어린이날 행사기획</li>
                             <li>NC소프트 임직원 자녀 놀이 행사기획</li>
@@ -23,7 +23,7 @@ export default function AboutPage() {
                         </ul>
                     </section>
                     <section>
-                        <h1>2025</h1>
+                        <h2>2025</h2>
                         <ul>
                             <li>진천군 어린이날 행사 운영</li>
                             <li>진천군 연합 방범대 체육대회 진행</li>

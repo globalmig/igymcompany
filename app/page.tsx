@@ -46,7 +46,7 @@ export default function HomePage() {
               data-aos-easing="ease-out"
               data-aos-duration="1000"
               data-aos-once="true">
-              <h1>행사가 더 즐거워집니다.</h1>
+              <h2>행사가 더 즐거워집니다.</h2>
             <h3>행사문의 : 010-3546-9985 / 카카오톡 ID : event.9985</h3>
             </div>
             <div className="scroll">

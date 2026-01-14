@@ -228,6 +228,10 @@
     margin-bottom: 70px;
 }
 
+.about>div>div>section h2{
+    font-size: 2rem;
+}
+
 .about>div>div>section ul {
     position: relative;
 }
