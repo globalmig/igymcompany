@@ -104,8 +104,46 @@ button {
     height: 100vh;
 }
 
+.loading {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 0;
+    text-align: center;
+}
+
 article>div {
     padding: 80px 5%;
+}
+
+/* pagination */
+
+.pagination {
+    margin-top: 50px;
+}
+
+.pagination>button {
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #eee;
+    color: #555;
+    cursor: pointer;
+}
+
+.pagination>div>button {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.pagination>button:hover {
+    background-color: #aaa;
+}
+
+.pagination>div>button.select {
+    background-color: #222;
+    color: white;
 }
 
 /* header */
@@ -367,7 +405,7 @@ main>div>:last-child h2 {
 }
 
 main.main-home>div>:last-child {
-    top: 65%;
+    top: 60%;
 }
 
 main.main-home>div>:last-child h1 {
@@ -479,6 +517,18 @@ footer>div>:last-child>:first-child button a {
     padding: 5px 25px;
 }
 
+footer>div>:nth-child(2) {
+    position: absolute;
+    top: 20px;
+    right: 3%;
+}
+
+footer>div>:nth-child(2) a>img {
+    width: 15px;
+    height: 15px;
+    opacity: 0.4;
+}
+
 footer>div>:last-child>:first-child button a:hover {
     background-color: #222;
     color: white;
@@ -532,6 +582,27 @@ footer>div>:last-child>p {
         padding: 150px 0px;
         width: 1200px;
         margin: 0 auto;
+    }
+
+    .loading {
+        padding: 150px 0;
+    }
+
+    /* pagination */
+
+    .pagination {
+        margin-top: 70px;
+    }
+
+    .pagination>button {
+        padding: 5px 20px;
+        font-size: 1rem;
+    }
+
+    .pagination>div>button {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
     }
 
     /* header */
@@ -722,6 +793,11 @@ footer>div>:last-child>p {
 
     footer>div>:first-child>div img {
         width: 60px;
+    }
+
+    footer>div>:nth-child(2) {
+        top: 30px;
+        right: 30px;
     }
 
     footer>div>:last-child>:first-child button a {

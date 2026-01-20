@@ -36,30 +36,19 @@ export const CATEGORY_MAP: { [key: string]: { title: string; icon?: string, bann
     airbounce: {
         title: '에어바운스',
         icon: "/icons/category_airbounce.png",
-        banner: "/images/에어바운스/banner.jpg",
+        banner: "/images/airbounce_banner.jpg",
         menu_img: "/images/에어바운스메뉴.jpg",
-        // categories: [
-        //     { name: "캐릭터 에어바운스", url: "character",},
-        //     { name: "스포츠 에어바운스", url: "sports",},
-        //     { name: "놀이터 에어바운스", url: "playground",},
-        //     { name: "챌린지 에어바운스", url: "challenge",},
-        // ],
     },
     waterslide: {
         title: '워터슬라이드',
         icon: "/icons/category_waterslide.png",
-        banner: "/images/워터슬라이드/banner.jpg",
+        banner: "/images/waterslide_banner.jpg",
         menu_img: "/images/워터슬라이드메뉴.jpg",
-        // categories: [
-        //     { name: "캐릭터 워터슬라이드", url: "character",},
-        //     { name: "아이스크림 워터슬라이드", url: "icecream",},
-        //     { name: "기타", url: "more",},
-        // ],
     },
     amusement: {
         title: '놀이기구',
         icon: "/icons/category_amusement.png",
-        banner: "/images/놀이기구/banner.jpg",
+        banner: "/images/amusement_banner.jpg",
         menu_img: "/images/체험놀이메뉴.jpg",
     },
     sports_competition: {
@@ -71,13 +60,7 @@ export const CATEGORY_MAP: { [key: string]: { title: string; icon?: string, bann
     experience: {
         title: '체험놀이',
         icon: "/icons/category_experience.png",
-        banner: "/images/체험놀이/banner.jpg",
+        banner: "/images/experience_banner.jpg",
         menu_img: "/images/놀이기구메뉴.jpg",
-        // categories: [
-        //     { name: "캐릭터 에어바운스", url: "character",},
-        //     { name: "스포츠 에어바운스", url: "sports",},
-        //     { name: "놀이터 에어바운스", url: "playground",},
-        //     { name: "챌린지 에어바운스", url: "challenge",},
-        // ],
     },
 };

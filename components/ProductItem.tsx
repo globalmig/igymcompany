@@ -6,14 +6,14 @@ import { useEffect } from "react";
 
 interface ProductItemProps {
     product: {
-        id: number,
+        id: string,
         name: string,
         category: string,
         thumnail: string,
+        intro?: string,
         contents?: string[],
-        intro?: string[],
-        size: string,
-        detail: string[]
+        size?: string,
+        detail?: string[]
     },
     isPreview: boolean
 }
@@ -28,7 +28,8 @@ export default function ProductItem({ product, isPreview }: ProductItemProps) {
     return (
         <section className="product-item" data-aos="fade-up"
             data-aos-easing="ease-out"
-            data-aos-duration="1000">
+            data-aos-duration="1000"
+            data-aos-once="true">
             <div>
                 <div>
                     <Link href={`/${product.category}/${product.id}`}>
@@ -39,9 +40,7 @@ export default function ProductItem({ product, isPreview }: ProductItemProps) {
                     <h4>{product.name}</h4>
                     <ul>
                         {product.size !== "별도 문의" && <li>{product.size}</li>}
-                        {product.intro && product.intro.map(i =>
-                            <li key={i}>{i}</li>
-                        )}
+                        {product.intro && <li>{product.intro}</li> }
                     </ul>
                 </div>
             </div>

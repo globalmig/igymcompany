@@ -1,5 +1,6 @@
 "use client";
 import CategoryBanner from "@/components/CategoryBanner";
+import { CATEGORY_MAP } from "@/data/category";
 import { usePathname } from "next/navigation";
 
 export default function SiteLayout({
@@ -10,11 +11,12 @@ export default function SiteLayout({
 
     const pathname = usePathname();
     const pathnameSplit = pathname.split('/').filter(Boolean);
-    const categoryBannerRoutes = ["/truss", "/sound"]
+
+    const showBanner = pathnameSplit.length === 1 && CATEGORY_MAP[pathnameSplit[0]];
 
     return (
         <>
-            {categoryBannerRoutes.includes(pathname) || pathnameSplit.length <= 1 && <CategoryBanner />}
+            {showBanner && <CategoryBanner />}
             {children}
         </>
     );

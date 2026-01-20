@@ -1,5 +1,16 @@
+import { supabase } from "@/lib/supabase/client";
 import { redirect } from "next/navigation";
 
-export default function TrussPage() {
-    redirect("/truss/1")
+export default async function TrussPage() {
+     const { data: product } = await supabase
+            .from("products")
+            .select("id")
+            .eq("category", "truss")
+            .order("created_at", { ascending: false })
+            .limit(1)
+            .maybeSingle();
+    
+        if (product) {
+            redirect(`/truss/${product.id}`);
+        }
 }

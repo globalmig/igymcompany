@@ -1,0 +1,369 @@
+.admin>div>:first-child {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.admin>div>:first-child h2 {
+    font-family: "SB_L";
+}
+
+.admin>div>:last-child>form input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+}
+
+.admin>div>:last-child>form>:last-child {
+    margin-top: 40px;
+}
+
+.admin>div>:last-child>form button {
+    width: 100%;
+    background-color: #222;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.admin-product-form>div>:first-child {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.admin-product-form>div>:first-child h2 {
+    font-family: "SB_L";
+}
+
+.admin-product-form .fm-thumnail .fm-thumnail-img img {
+    width: 100%;
+    height: 175px;
+    object-fit: cover;
+}
+
+.admin-product-form .fm-contents>div {
+    margin-top: 10px;
+}
+
+.admin-product-form .fm-contents>div>div {
+    display: flex;
+    gap: 5px;
+}
+
+.admin-product-form .fm-contents button {
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.admin-product-form .fm-contents .fm-contents-add {
+    background-color: #222;
+    color: white;
+}
+
+.admin-product-form .fm-contents .fm-contents-delete {
+    background-color: #eee;
+    color: #555;
+}
+
+.admin-product-form .fm-detail>div {
+    gap: 8px;
+    justify-content: left;
+}
+
+.admin-product-form .fm-detail>div>div {
+    width: 32.5%;
+    margin: 5px 0;
+}
+
+.admin-product-form .fm-detail>div>div img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+}
+
+.admin-product-form .fm-detail .fm-detail-add {
+    margin-top: 30px !important;
+}
+
+.admin-product-form .fm-detail .fm-detail-add>div {
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    width: 100%;
+    padding: 20px 10px;
+    margin-top: 10px;
+}
+
+.admin-product-form .fm-detail .fm-detail-add>div>div {
+    width: 32%;
+    margin: 2px 0;
+}
+
+.admin-product-form .fm-detail>div button {
+    margin-top: 8px;
+    background-color: #eee;
+    color: #555;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.admin-product-form>div>:last-child>form>div {
+    margin: 20px 0;
+}
+
+.admin-product-form>div>:last-child>form>div input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.admin-product-form>div>:last-child>form>div select,
+.admin-product-form>div>:last-child>form>div textarea {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.admin-product-form>div>:last-child>form label h4 span {
+    font-size: 0.8rem;
+    color: #555;
+}
+
+.admin-product-form>div>:last-child>form label p {
+    color: #555;
+    font-size: 0.8rem;
+    margin: 5px 0;
+}
+
+.admin-product-form>div>:last-child>form>div>:last-child {
+    gap: 8px;
+    justify-content: left;
+}
+
+.admin-product-form>div>:last-child>form>:last-child {
+    margin-top: 30px;
+}
+
+.admin-product-form>div>:last-child>form>:last-child button {
+    width: 48%;
+    background-color: #222;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 0px;
+}
+
+.admin-product-form>div>:last-child>form>:last-child button:last-of-type {
+    background-color: #eee;
+    color: #555;
+}
+
+.fm-detail-btn {
+    margin-top: 50px;
+}
+
+.fm-detail-btn>button {
+    width: 48%;
+    background-color: #222;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.fm-detail-btn>button:last-of-type {
+    background-color: #eee;
+    color: #555;
+}
+
+/* list */
+
+.admin-product-list>div>:first-child {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.admin-product-list>div>:first-child h2 {
+    font-family: "SB_L";
+}
+
+.admin-product-list>div>:nth-child(2)>div:first-child {
+    text-align: right;
+}
+
+.admin-product-list>div>:nth-child(2)>div:first-child select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    width: 30%;
+}
+
+.admin-product-list>div>:nth-child(2)>p {
+    margin: 70px 0;
+    text-align: center;
+}
+
+.admin-product-list>div>:nth-child(2)>div {
+    margin: 30px 0 50px;
+}
+
+.admin-product-list>div>:nth-child(2)>div>ul:first-of-type {
+    background-color: #222;
+    color: white;
+}
+
+.admin-product-list>div>:nth-child(2)>div>ul>li {
+    padding: 8px 0;
+    width: 50%;
+    text-align: center;
+}
+
+.admin-product-list>div>:nth-child(2)>div>div>a>ul>li {
+    padding: 8px 0;
+    border-bottom: 1px solid #ccc;
+    width: 50%;
+    text-align: center;
+}
+
+.admin-product-list>div>:nth-child(3) {
+    text-align: right;
+}
+
+.admin-product-list>div>:nth-child(3) button {
+    padding: 8px 25px;
+    background-color: #222;
+}
+
+.admin-product-list>div>:nth-child(3) button a {
+    color: white;
+}
+
+.admin-product-list>div>:last-child {
+    margin-top: 40px;
+}
+
+@media screen and (min-width: 768px) {
+
+    .admin-product-form .fm-detail>div>div img {
+        height: 200px;
+    }
+
+    .admin-product-form .fm-thumnail .fm-thumnail-img img {
+        height: 500px;
+    }
+}
+
+@media screen and (min-width: 1366px) {
+
+    .admin>div>:first-child h2 {
+        font-size: 2rem;
+    }
+
+    .admin>div>:last-child>form {
+        width: 800px;
+        margin: 0 auto;
+    }
+
+    .admin>div>:last-child>form label h4 {
+        font-size: 1.3rem;
+    }
+
+    .admin>div>:last-child>form input {
+        padding: 15px;
+        font-size: 1rem;
+    }
+
+    .admin>div>:last-child>form button {
+        padding: 15px;
+        font-size: 1rem;
+    }
+
+    .admin-product-form>div>:first-child h2 {
+        font-size: 2rem;
+    }
+
+    .admin-product-form>div form {
+        width: 800px;
+        margin: 0 auto;
+    }
+
+    .admin-product-form>div>:last-child>form>div {
+        margin: 4cqi 0;
+    }
+
+    .admin-product-form>div>:last-child>form>div input {
+        padding: 15px;
+        font-size: 1rem;
+    }
+
+    .admin-product-form>div>:last-child>form>div select,
+    .admin-product-form>div>:last-child>form>div textarea {
+        padding: 15px;
+        font-size: 1rem;
+    }
+
+    .admin-product-form>div>:last-child>form label h4 {
+        font-size: 1.3rem;
+    }
+
+    .admin-product-form>div>:last-child>form label h4 span {
+        font-size: 1rem;
+    }
+
+    .admin-product-form>div>:last-child>form label p {
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
+
+    .admin-product-form>div>:last-child>form>:last-child button {
+        width: 390px;
+        padding: 15px;
+        font-size: 1rem;
+    }
+
+    .fm-detail-btn {
+        width: 800px;
+        margin: 70px auto 0;
+    }
+
+    .fm-detail-btn>button {
+        width: 390px;
+        padding: 15px;
+        font-size: 1rem;
+    }
+
+    /* list */
+
+    .admin-product-list>div>:first-child h2 {
+        font-size: 2rem;
+    }
+
+    .admin-product-list>div>:nth-child(2)>div:first-child select {
+        padding: 10px;
+        width: 200px;
+    }
+
+    .admin-product-list>div>:nth-child(2)>div>div>a>ul>li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .admin-product-list>div>:nth-child(2)>div>div>a>ul>li img {
+        width: 120px;
+        height: auto;
+        margin: auto;
+    }
+
+    .admin-product-list>div> :last-child {
+        margin-top: 80px;
+    }
+
+    .admin-product-list>div>:nth-child(3) button {
+        padding: 10px 35px;
+        font-size: 1rem;
+    }
+
+}

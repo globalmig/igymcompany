@@ -22,6 +22,11 @@ export default function Footer() {
                     </div>
                 </div>
                 <div>
+                    <Link href="/admin">
+                    <Image src="/icons/admin-edit.png" alt="관리자페이지 이동" width={30} height={30}/>
+                    </Link>
+                </div>
+                <div>
                     <div>
                         <button>
                             <Link href="/inquire">문의하기</Link>
@@ -32,7 +37,7 @@ export default function Footer() {
                         <li className="line">상호명 : (주)에스원이벤트</li>
                         <li className="line">사업자번호 : 723-87-02984</li>
                         <li>대표자 : 최석현</li>
-                        <li className="line">대표번호 :  010-3546-9985</li>
+                        <li className="line">대표번호 : 010-3546-9985</li>
                         <li>주소 : 충북 진천군 초평면 원댕이길 15번지 1층 (에스원이벤트)</li>
                     </ul>
                     <p>@2025 (주)에스원이벤트. All rights reserved.</p>

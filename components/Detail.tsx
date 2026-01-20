@@ -1,19 +1,44 @@
 "use client";
-import { PRODUCT } from "@/data/product";
 import Image from "next/image";
 import Link from "next/link";
-import { useParams} from "next/navigation";
+import { useParams } from "next/navigation";
+import { useEffect, useState } from "react";
+
+interface ProductDetail {
+    id: string;
+    name: string;
+    category: string;
+    thumnail: string;
+    size?: string;
+    contents?: string[];
+    detail?: string[];
+}
 
 export default function Detail() {
 
     const params = useParams();
-    const {id, category} = params;
-    const detail = id ?
-        PRODUCT.find(p => String(p.id) === id) :
-        PRODUCT.find(p => String(p.category) === category);
+    const { id } = params;
+    const [product, setProduct] = useState<ProductDetail | null>(null);
 
-    if (!detail) {
-        return <div className="loading">홈페이지를 불러오는 중입니다.</div>;
+    useEffect(()=> {
+        if(!id) return;
+
+        const fetchDetail = async () => {
+            try {
+                const res = await fetch(`/api/product/${id}`);
+                if (!res.ok) throw new Error("상품을 불러올 수 없습니다.");
+                
+                const data = await res.json();
+                setProduct(data);
+            } catch (err) {
+                console.error("Detail Fetch Error:", err);
+            }
+        };
+        fetchDetail();
+    }, [id]);
+
+    if (!product) {
+        return <div className="loading">상품 정보를 불러오는 중입니다.</div>;
     }
 
     return (
@@ -21,25 +46,26 @@ export default function Detail() {
             <div>
                 <div>
                     <div>
-                        <Image src={detail.thumnail} alt={detail.name} width={1000} height={619} />
+                        <Image src={product.thumnail} alt={product.name} width={1000} height={619} />
                     </div>
-                    <h2>{detail.name}</h2>
-                    {detail.category !== "sound" && detail.category !== "rental" ?
-                    <div>
-                        <p><span>SIZE</span> {detail.size}</p>
-                        <button><Link href="/inquire">문의하기</Link></button>
-                    </div> : <div style={{display: "none"}}></div>
+                    <h2>{product.name}</h2>
+                    {product.category !== "sound" && product.category !== "rental" ?
+                        <div>
+                            <p><span>SIZE</span> {product.size}</p>
+                            <button><Link href="/inquire">문의하기</Link></button>
+                        </div> :
+                        <div style={{ display: "none" }}></div>
                     }
-                    {detail.contents &&
-                    <ul>
-                        {detail.contents.map((c, index) => <li key={index}>{c}</li>)}
-                    </ul>
+                    {product.contents &&
+                        <ul>
+                            {product.contents.map((c, index) => <li key={index}>{c}</li>)}
+                        </ul>
                     }
                 </div>
                 <div>
-                    {detail.detail.map((d, index)=>
+                    {product.detail?.map((d, index) =>
                         <div key={index}>
-                            <Image src={d} alt={detail.name} width={1000} height={619} />
+                            <Image src={d} alt={product.name} width={1000} height={619} />
                         </div>
                     )}
                 </div>
