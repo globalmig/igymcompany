@@ -1,7 +1,9 @@
 User-agent: *
 Disallow: /inquire
+Disallow: /admin
 
 User-agent: Yeti
 Disallow: /inquire
+Disallow: /admin
 
 Sitemap: https://s-one-event.co.kr/sitemap.xml

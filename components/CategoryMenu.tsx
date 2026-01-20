@@ -6,13 +6,11 @@ import { useEffect, useRef, useState } from "react";
 
 export default function CategoryMenu() {
 
-    // const [isFocus, setIsFocus] = useState<string | null>(null);
     const pathname = usePathname();
     const isFocus = pathname.split("/")[1] || null;
     const [isSticky, setIsSticky] = useState<boolean>(false);
     const horizontalRef = useRef<HTMLDivElement>(null);
 
-    // mobile gnb : about, inquire 제외
     const excludeNot = ["about", "inquire"];
     const categoryMenu = Object.entries(CATEGORY_MAP)
         .filter(([key]) => !excludeNot.includes(key as any))
