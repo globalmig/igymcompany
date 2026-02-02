@@ -43,16 +43,16 @@ const MainSlide = forwardRef<SlideHandle>((_, ref) => {
     return (
         <Slider ref={sliderRef} {...settings} className="main-slider">
             <div>
-                <Image src="/images/banner_1.jpg" alt="기업·어린이 행사 기획 및 대행 전문" width={2560} height={942} priority quality={100} />
+                <Image src="/images/banner_1.jpg" alt="에스원 이벤트 사진" width={2560} height={942} priority quality={100} />
             </div>
             <div>
-                <Image src="/images/banner_2.jpg" alt="기업·어린이 행사 기획 및 대행 전문" width={2560} height={942} priority quality={100} />
+                <Image src="/images/banner_2.jpg" alt="에스원 이벤트 사진" width={2560} height={942} priority quality={100} />
             </div>
             <div>
-                <Image src="/images/banner_3.jpg" alt="기업·어린이 행사 기획 및 대행 전문" width={2560} height={942} priority quality={100} />
+                <Image src="/images/banner_3.jpg" alt="에스원 이벤트 사진" width={2560} height={942} priority quality={100} />
             </div>
             <div>
-                <Image src="/images/banner_4.jpg" alt="기업·어린이 행사 기획 및 대행 전문" width={2560} height={942} priority quality={100} />
+                <Image src="/images/banner_4.jpg" alt="에스원 이벤트 사진" width={2560} height={942} priority quality={100} />
             </div>
         </Slider>
     )
