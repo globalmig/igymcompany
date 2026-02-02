@@ -22,6 +22,10 @@ export const metadata: Metadata = {
     "놀이기구",
     "렌탈",
   ],
+  metadataBase: new URL('https://www.s-one-event.co.kr'),
+  alternates: {
+    canonical: '/',
+  },
   openGraph: {
     title: '에스원이벤트',
     description: '기업·어린이 행사 기획 및 대행 전문',
