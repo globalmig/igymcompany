@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "에스원이벤트 | 기업·어린이 행사 기획 및 대행 솔루션",
-  description: "기업·어린이 행사 기획 및 대행 전문. 에어바운스·물놀이·체험활동·체육대회 문의 010-3546-9985",
+  description: "기업·어린이 행사 기획 및 대행 전문. 에어바운스·물놀이·체험활동·체육대회",
   keywords: [
   "에스원이벤트",
   "어린이날 행사",
