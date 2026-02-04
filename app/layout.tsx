@@ -6,8 +6,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "에스원 이벤트 | 기업·어린이 행사 기획 및 대행 솔루션",
-  description: "에어바운스, 워터슬라이드, 놀이기구 대여 및 설치 전문 에스원 이벤트입니다.",
+  title: "에스원이벤트 | 기업·어린이 행사 기획 및 대행 솔루션",
+  description: "에어바운스, 워터슬라이드, 놀이기구 대여 및 설치 전문 에스원이벤트입니다.",
   keywords: ["에스원", "에스원이벤트", "어린이날", "에어바운스", "워터슬라이드", "워터파크", "물놀이", "체육대회", "초등학교 행사", "어린이 체험활동", "놀이기구", "렌탈"],
   metadataBase: new URL("https://www.s-one-event.co.kr"),
   alternates: {
@@ -16,11 +16,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: "에스원이벤트",
     description: "기업·어린이 행사 기획 및 대행 전문",
-    url: "https://s-one-event.co.kr",
+    url: "https://www.s-one-event.co.kr",
     siteName: "에스원이벤트",
     images: [
       {
-        url: "https://s-one-event.co.kr/images/og_image.jpg",
+        url: "https://www.s-one-event.co.kr/images/og_image.jpg",
         width: 1200,
         height: 630,
         alt: "에스원이벤트",
