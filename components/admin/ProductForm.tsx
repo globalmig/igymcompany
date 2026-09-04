@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { useParams, useRouter } from "next/navigation";
 import { ChangeEvent, useCallback, useEffect, useState } from "react"
+import { uploadProductImages } from "@/lib/supabase/upload";
 
 type ProductFormMode = "upload" | "edit" | "detail";
 
@@ -23,7 +24,6 @@ interface ProductForm {
     intro?: string;
     contents: string[],
     size?: string,
-    detail: File[],
 }
 
 interface ProductFormProps {
@@ -47,7 +47,6 @@ export default function ProductForm({ mode, initialData }: ProductFormProps) {
         intro: initialData?.intro ?? "",
         contents: initialData?.contents ?? [""],
         size: initialData?.size ?? "별도 문의",
-        detail: []
     });
 
     useEffect(() => {
@@ -86,9 +85,6 @@ export default function ProductForm({ mode, initialData }: ProductFormProps) {
         if (name === "thumnail") {
             setForm(prev => ({ ...prev, thumnail: files[0] }));
         }
-        if (name === "detail") {
-            setForm(prev => ({ ...prev, detail: Array.from(files) }));
-        }
     };
 
     const onChangeForm = useCallback((e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -115,7 +111,6 @@ export default function ProductForm({ mode, initialData }: ProductFormProps) {
             intro: initialData?.intro ?? "",
             contents: initialData?.contents ?? [""],
             size: initialData?.size ?? "별도 문의",
-            detail: []
         });
         router.back();
     };
@@ -160,7 +155,7 @@ export default function ProductForm({ mode, initialData }: ProductFormProps) {
             return;
         }
 
-        for (const file of form.detail) {
+        for (const file of newDetailFiles) {
             const ext = file.name.split(".").pop()?.toLowerCase() ?? "";
             const allowedExtensions = ["jpg", "jpeg", "png"];
             if (!allowedExtensions.includes(ext)) {
@@ -169,32 +164,32 @@ export default function ProductForm({ mode, initialData }: ProductFormProps) {
             }
         }
 
-        const formData = new FormData();
-        formData.append("name", form.name);
-        formData.append("category", form.category);
-        formData.append("intro", form.intro || "");
-        formData.append("size", form.size || "");
-        formData.append("contents", JSON.stringify(form.contents));
-
-        if (form.thumnail) {
-            // 사용자가 파일을 새로 선택한 경우
-            formData.append("thumnail", form.thumnail);
-        } else if (initialData?.thumnail) {
-            // 파일을 선택하지 않았지만 기존 데이터가 있는 경우 (수정 시 유지)
-            formData.append("thumnail", initialData.thumnail);
-        }
-
-        // 상세 이미지 처리
-        formData.append("existingDetail", JSON.stringify(existingDetail));
-        // 새로 추가할 파일들 전송
-        newDetailFiles.forEach((file) => {
-            formData.append("detail", file);
-        });
-
         try {
+            // 이미지는 Vercel 서버리스 함수를 거치지 않고 Supabase Storage로 직접 업로드한다.
+            // (대용량 이미지가 API 요청 본문 크기 제한(413)에 걸리는 문제 방지)
+            let thumnailUrl = initialData?.thumnail ?? "";
+            if (form.thumnail) {
+                const [uploadedUrl] = await uploadProductImages([form.thumnail], "thumnail");
+                thumnailUrl = uploadedUrl;
+            }
+
+            const newDetailUrls = await uploadProductImages(newDetailFiles, "detail");
+
+            const payload = {
+                name: form.name,
+                category: form.category,
+                intro: form.intro || "",
+                size: form.size || "",
+                contents: form.contents,
+                thumnail: thumnailUrl,
+                existingDetail,
+                detail: newDetailUrls,
+            };
+
             const res = await fetch(isUpload ? "/api/product" : `/api/product/${id}`, {
                 method: isUpload ? "POST" : "PATCH",
-                body: formData,
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(payload),
             });
 
             const result = await res.json();
@@ -378,15 +373,15 @@ export default function ProductForm({ mode, initialData }: ProductFormProps) {
                 </div>
                 {(isUpload || isEdit) && (
                     <div className="display-flex">
-                        <button type="submit">{isUpload ? "등록" : "수정"}</button>
+                        <button type="submit">{isUpload ? "등록" : "저장"}</button>
                         <button type="button" onClick={onClickCancel}>취소</button>
                     </div>
                 )}
             </form>
             {isDetail &&
                 <div className="display-flex fm-detail-btn">
-                    <button onClick={() => goEdit(String(id))}>수정</button>
-                    <button onClick={onProductDelete}>삭제</button>
+                    <button onClick={() => goEdit(String(id))}>수정하기</button>
+                    <button onClick={onProductDelete}>삭제하기</button>
                 </div>
             }
 
