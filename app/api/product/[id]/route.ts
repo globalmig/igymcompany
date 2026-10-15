@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { supabaseServer } from "@/lib/supabase/server";
+import { DetailBlock, extractImageUrls, parseDetailBlocks, serializeDetailBlocks } from "@/lib/product/detailBlocks";
 
 export async function GET(
   req: NextRequest,
@@ -37,28 +38,28 @@ export async function PATCH(
       category,
       intro,
       size,
-      contents,
       thumnail: thumnailUrl,
-      existingDetail,
-      detail: newDetailUrls,
+      detail,
+      show_on_main,
     } = body as {
       name: string;
       category: string;
       intro?: string;
       size?: string;
-      contents: string[];
       thumnail: string;
-      existingDetail: string[];
-      detail: string[];
+      detail: DetailBlock[];
+      show_on_main?: boolean;
     };
 
     // [기존 데이터 조회] 삭제된 파일 찾기
     const { data: currentProduct } = await supabaseServer
       .from("products")
-      .select("detail, thumnail")
+      .select("detail, contents, thumnail")
       .eq("id", id)
       .single();
-    const oldDetailUrls: string[] = currentProduct?.detail || [];
+    const oldImageUrls = extractImageUrls(
+      parseDetailBlocks(currentProduct?.detail, currentProduct?.contents)
+    );
 
     // 1. 썸네일: 새 이미지로 교체된 경우(클라이언트가 이미 업로드 완료) 기존 파일만 스토리지에서 정리
     const oldThumnailUrl = currentProduct?.thumnail;
@@ -70,14 +71,13 @@ export async function PATCH(
     }
 
     // 2. 상세 이미지 처리 (새 파일은 클라이언트가 이미 업로드 완료, URL만 전달됨)
-    // [삭제] 기존에 있었지만 existingDetail에 없는 파일은 스토리지에서 삭제
-    const toDelete = oldDetailUrls.filter(url => !existingDetail.includes(url));
+    // [삭제] 기존에 있었지만 새 블록 목록에 더 이상 없는 이미지는 스토리지에서 삭제
+    const newImageUrls = extractImageUrls(detail);
+    const toDelete = oldImageUrls.filter(url => !newImageUrls.includes(url));
     for (const url of toDelete) {
       const path = url.split("/public/products/")[1];
       if (path) await supabaseServer.storage.from("products").remove([path]);
     }
-
-    const finalDetail = [...existingDetail, ...(newDetailUrls || [])];
 
     // 3. DB 업데이트
     const { error: dbError } = await supabaseServer
@@ -87,9 +87,10 @@ export async function PATCH(
         category,
         intro,
         size,
-        contents,
+        contents: [],
         thumnail: thumnailUrl,
-        detail: finalDetail,
+        detail: serializeDetailBlocks(detail),
+        show_on_main: show_on_main ?? false,
         updated_at: new Date().toISOString(),
       })
       .eq("id", id);

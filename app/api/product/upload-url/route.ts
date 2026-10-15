@@ -5,6 +5,8 @@ import { supabaseServer } from "@/lib/supabase/server";
 // Vercel 서버리스 함수는 요청 본문 크기(4.5MB)에 제한이 있어, 큰 이미지 파일을
 // API 라우트를 거쳐 업로드하면 413(Request Entity Too Large)이 발생한다.
 // 파일 바이너리는 Supabase로 직접 전송하고, 이 라우트는 짧은 JSON만 주고받는다.
+const ALLOWED_EXTENSIONS = new Set(["jpg", "jpeg", "png", "webp", "gif"]);
+
 export async function POST(req: NextRequest) {
   try {
     const { files } = (await req.json()) as {
@@ -18,6 +20,12 @@ export async function POST(req: NextRequest) {
     const results = await Promise.all(
       files.map(async ({ fileName, folder }) => {
         const ext = fileName.split(".").pop()?.toLowerCase() ?? "";
+        if (!ALLOWED_EXTENSIONS.has(ext)) {
+          throw new Error(`허용되지 않는 파일 형식입니다: .${ext}`);
+        }
+        if (folder !== "thumnail" && folder !== "detail") {
+          throw new Error("허용되지 않는 업로드 경로입니다.");
+        }
         const path = `products/${folder}/${Date.now()}_${crypto.randomUUID()}.${ext}`;
 
         const { data, error } = await supabaseServer.storage

@@ -1,5 +1,5 @@
 "use client"
-import ProductForm from "@/components/admin/ProductForm";
+import ProductForm from "@/components/admin/products/ProductForm";
 import { supabase } from "@/lib/supabase/client";
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -13,6 +13,7 @@ interface InitialDataProps {
     contents: string[];
     size?: string;
     detail: string[];
+    show_on_main?: boolean;
 }
 
 export default function ProductEditPage() {
@@ -20,7 +21,7 @@ export default function ProductEditPage() {
     const [initialData, setInitialData] = useState<InitialDataProps | null>(null);
     const [loading, setLoading] = useState(true);
 
-    useEffect(() => { 
+    useEffect(() => {
         if (!id) return;
 
         const fetchProduct = async () => {
@@ -45,6 +46,7 @@ export default function ProductEditPage() {
                     contents: data.contents ?? [],
                     size: data.size ?? "별도 문의",
                     detail: data.detail ?? [],
+                    show_on_main: data.show_on_main ?? false,
                 };
 
                 setInitialData(formattedData);
@@ -58,20 +60,16 @@ export default function ProductEditPage() {
 
         fetchProduct();
     }, [id]);
-    
-    if (loading) return <div className="loading">상품 정보를 불러오는 중입니다.</div>;
-    if (!initialData) return <div className="loading">상품이 존재하지 않습니다.</div>;
+
+    if (loading) return <div className="w-full max-w-300 mx-auto py-25 text-center xl:py-37.5">상품 정보를 불러오는 중입니다.</div>;
+    if (!initialData) return <div className="w-full max-w-300 mx-auto py-25 text-center xl:py-37.5">상품이 존재하지 않습니다.</div>;
 
     return (
-        <article className="admin-product-form">
-            <div>
-                <div>
-                    <h2>상품 수정</h2>
-                </div>
-                <div>
-                    <ProductForm mode="edit" initialData={initialData} />
-                </div>
+        <div className="bg-white border border-admin-border rounded-[14px] p-6 xl:max-w-325 xl:mx-auto">
+            <div className="flex flex-wrap items-center justify-between gap-3.5 mb-5">
+                <h2 className="font-sb-l text-[1.15rem] text-admin-dark">제품 수정</h2>
             </div>
-        </article>
+            <ProductForm mode="edit" initialData={initialData} />
+        </div>
     )
 }
