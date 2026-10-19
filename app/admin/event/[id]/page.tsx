@@ -25,7 +25,7 @@ export default function AdminEventDetailPage() {
     if (!data) return <div className="w-full max-w-300 mx-auto py-25 text-center xl:py-37.5">행사 정보를 불러오는 중입니다...</div>;
 
     return (
-        <div className="bg-white border border-admin-border rounded-[14px] p-6 xl:max-w-190 xl:mx-auto">
+        <div className="bg-white border border-admin-border rounded-[14px] p-6 xl:max-w-325 xl:mx-auto">
             <div className="flex flex-wrap items-center justify-between gap-3.5 mb-5">
                 <h2 className="font-sb-l text-[1.15rem] text-admin-dark">행사 상세</h2>
             </div>
