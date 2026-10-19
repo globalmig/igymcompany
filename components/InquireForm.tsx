@@ -122,63 +122,69 @@ export default function InquireForm() {
 
     }, [form]);
 
+    const inputClasses = "w-full rounded-lg p-2.5 xl:p-3.75 border border-[#ccc] xl:text-[1.1rem] xl:placeholder:text-[1rem]";
+    const phoneInputClasses = "w-[30%] rounded-lg p-2.5 xl:p-3.75 border border-[#ccc] xl:text-[1.1rem] xl:placeholder:text-[1rem]";
+    const divClasses = "my-6.25 xl:mt-0 xl:mb-10 xl:mx-0";
+    const h3Classes = "mb-2.5 xl:mb-5 xl:text-[1.3rem] after:content-['*'] after:text-[#FF1616] after:ml-1.25";
+    const textBlockPClasses = "text-[0.8rem] xl:text-[1rem]";
+
     return (
         <>
             <form onSubmit={onSubmitForm}>
-                <div>
-                    <label htmlFor="name"><h3 className="required">기관명</h3></label>
-                    <input type="text" id="name" name="name" placeholder="기관명을 입력해주세요." onChange={onChangeForm} value={form.name} />
+                <div className={divClasses}>
+                    <label htmlFor="name"><h3 className={`required ${h3Classes}`}>기관명</h3></label>
+                    <input type="text" id="name" name="name" placeholder="기관명을 입력해주세요." onChange={onChangeForm} value={form.name} className={inputClasses} />
                 </div>
 
-                <div>
-                    <legend><h3 className="required">담당부서 및 담당자 전화번호</h3></legend>
-                    <div className="display-flex">
-                        <input type="text" inputMode="numeric" id="phoneFront" name="phoneFront" maxLength={3} onChange={onChangeForm} value={form.phoneFront} />
-                        <p>-</p>
-                        <input type="text" inputMode="numeric" id="phoneMiddle" name="phoneMiddle" maxLength={4} onChange={onChangeForm} value={form.phoneMiddle} />
-                        <p>-</p>
-                        <input type="text" inputMode="numeric" id="phoneLast" name="phoneLast" maxLength={4} onChange={onChangeForm} value={form.phoneLast} />
+                <div className={`${divClasses} xl:w-100`}>
+                    <legend><h3 className={`required ${h3Classes}`}>담당부서 및 담당자 전화번호</h3></legend>
+                    <div className="flex justify-between">
+                        <input type="text" inputMode="numeric" id="phoneFront" name="phoneFront" maxLength={3} onChange={onChangeForm} value={form.phoneFront} className={phoneInputClasses} />
+                        <p className="m-auto xl:text-[1.2rem] xl:font-bold">-</p>
+                        <input type="text" inputMode="numeric" id="phoneMiddle" name="phoneMiddle" maxLength={4} onChange={onChangeForm} value={form.phoneMiddle} className={phoneInputClasses} />
+                        <p className="m-auto xl:text-[1.2rem] xl:font-bold">-</p>
+                        <input type="text" inputMode="numeric" id="phoneLast" name="phoneLast" maxLength={4} onChange={onChangeForm} value={form.phoneLast} className={phoneInputClasses} />
                     </div>
                 </div>
 
-                <div>
-                    <label htmlFor="date"><h3>행사 일자</h3></label>
-                    <input type="date" id="date" name="date" onChange={onChangeForm} value={form.date} />
+                <div className={divClasses}>
+                    <label htmlFor="date"><h3 className={h3Classes}>행사 일자</h3></label>
+                    <input type="date" id="date" name="date" onChange={onChangeForm} value={form.date} className={inputClasses} />
                 </div>
 
-                <div>
-                    <label htmlFor="contents"><h3>문의 내용</h3></label>
-                    <textarea id="contents" name="contents" rows={7} placeholder="문의 내용을 입력해주세요." onChange={onChangeForm} value={form.contents} />
+                <div className={divClasses}>
+                    <label htmlFor="contents"><h3 className={h3Classes}>문의 내용</h3></label>
+                    <textarea id="contents" name="contents" rows={7} placeholder="문의 내용을 입력해주세요." onChange={onChangeForm} value={form.contents} className={inputClasses} />
                 </div>
 
-                <div>
-                    <label htmlFor="file"><h3>
-                        첨부파일 (선택)<br /><span>사진(JPG)만 업로드 가능하며, 최대 용량 200KB입니다.</span>
+                <div className={divClasses}>
+                    <label htmlFor="file"><h3 className="mb-2.5 xl:mb-5 xl:text-[1.3rem]">
+                        첨부파일 (선택)<br /><span className="text-[0.82rem]">사진(JPG)만 업로드 가능하며, 최대 용량 200KB입니다.</span>
                     </h3></label>
-                    <input type="file" id="file" name="file" accept=".jpg,.jpeg" onChange={onChangeForm} />
+                    <input type="file" id="file" name="file" accept=".jpg,.jpeg" onChange={onChangeForm} className={inputClasses} />
                 </div>
 
-                <div>
-                    <label htmlFor=""><h3>개인 정보 수집 및 이용 동의</h3></label>
-                    <div>
-                        <p>아래의 개인 정보를 수집하며, 상담 외 다른 목적으로 사용되지 않습니다.</p>
-                        <ul>
-                            <li>- 수집 항목 : 기관명, 연락처, 행사일자, 문의 내용</li>
-                            <li>- 수집 및 이용 목적 : 문의 상담 및 고객 응대</li>
-                            <li>- 보유 기간 : 문의일로부터 1년간 보관 후 즉시 파기</li>
-                            <li>- 수집 방법 : 홈페이지 문의 접수</li>
+                <div className={divClasses}>
+                    <label htmlFor=""><h3 className={h3Classes}>개인 정보 수집 및 이용 동의</h3></label>
+                    <div className="py-3.75 px-2.5 xl:p-7.5 rounded-lg border border-[#ccc]">
+                        <p className={`${textBlockPClasses} font-bold`}>아래의 개인 정보를 수집하며, 상담 외 다른 목적으로 사용되지 않습니다.</p>
+                        <ul className="my-5 xl:my-7.5">
+                            <li className="my-1.25 text-[0.8rem] xl:my-2 xl:text-[1rem]">- 수집 항목 : 기관명, 연락처, 행사일자, 문의 내용</li>
+                            <li className="my-1.25 text-[0.8rem] xl:my-2 xl:text-[1rem]">- 수집 및 이용 목적 : 문의 상담 및 고객 응대</li>
+                            <li className="my-1.25 text-[0.8rem] xl:my-2 xl:text-[1rem]">- 보유 기간 : 문의일로부터 1년간 보관 후 즉시 파기</li>
+                            <li className="my-1.25 text-[0.8rem] xl:my-2 xl:text-[1rem]">- 수집 방법 : 홈페이지 문의 접수</li>
                         </ul>
-                        <p>접수된 문의 내용은 SMS 발송을 통해 [(주)에스원이벤트] 담당자에게 실시간 전달됩니다.</p>
-                        <p>개인정보 수집에 동의하지 않으실 경우, 상담 서비스 제공이 제한될 수 있습니다.</p>
+                        <p className={textBlockPClasses}>접수된 문의 내용은 SMS 발송을 통해 [(주)에스원이벤트] 담당자에게 실시간 전달됩니다.</p>
+                        <p className={`${textBlockPClasses} mt-3.75`}>개인정보 수집에 동의하지 않으실 경우, 상담 서비스 제공이 제한될 수 있습니다.</p>
                     </div>
-                    <div className="display-flex">
-                        <input type="checkbox" id="privacy" name="privacy" checked={form.privacy} onChange={onChangeForm} />
+                    <div className="flex mt-5 justify-start gap-2.5">
+                        <input type="checkbox" id="privacy" name="privacy" checked={form.privacy} onChange={onChangeForm} className="w-auto my-auto mx-0 rounded-lg p-2.5 xl:p-3.75 border border-[#ccc]" />
                         <label htmlFor="privacy"></label>
-                        <p>개인 정보 수집 및 이용에 동의합니다.</p>
+                        <p className="xl:text-[1.1rem]">개인 정보 수집 및 이용에 동의합니다.</p>
                     </div>
                 </div>
 
-                <button type="submit">문의 접수하기</button>
+                <button type="submit" className="w-full p-3.75 xl:p-5 mt-7.5 xl:mt-12.5 rounded-full text-white font-bold bg-black cursor-pointer xl:text-[1.2rem]">문의 접수하기</button>
 
             </form>
         </>

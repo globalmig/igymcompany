@@ -1,7 +1,11 @@
 import { NextResponse } from "next/server";
 import fs from "fs/promises";
 import path from "path";
+import crypto from "crypto";
 import { SolapiMessageService } from "solapi";
+
+const ALLOWED_FILE_EXTENSIONS = new Set([".jpg", ".jpeg", ".png", ".gif", ".webp", ".pdf"]);
+const MAX_FILE_SIZE_BYTES = 10 * 1024 * 1024; // 10MB
 
 export async function POST(req: Request) {
     try {
@@ -24,10 +28,20 @@ export async function POST(req: Request) {
         let fileId: string | undefined;
 
         if (file) {
+            if (file.size > MAX_FILE_SIZE_BYTES) {
+                throw new Error("첨부파일 용량은 10MB를 초과할 수 없습니다.");
+            }
+
+            const ext = path.extname(file.name).toLowerCase();
+            if (!ALLOWED_FILE_EXTENSIONS.has(ext)) {
+                throw new Error(`허용되지 않는 파일 형식입니다: ${ext || "(알 수 없음)"}`);
+            }
+
             const tempDir = path.join(process.cwd(), "uploads");
             await fs.mkdir(tempDir, { recursive: true });
 
-            const tempFilePath = path.join(tempDir, file.name);
+            const safeFileName = `${crypto.randomUUID()}${ext}`;
+            const tempFilePath = path.join(tempDir, safeFileName);
 
             const buffer = Buffer.from(await file.arrayBuffer());
             await fs.writeFile(tempFilePath, buffer);

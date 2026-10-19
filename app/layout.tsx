@@ -1,9 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import "./style.css";
-import "./admin.css";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import SiteChrome from "@/components/SiteChrome";
 
 export const metadata: Metadata = {
   title: "에스원이벤트 | 기업·어린이 행사 기획 및 대행 솔루션",
@@ -45,9 +42,7 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body>
-        <Header />
-        {children}
-        <Footer />
+        <SiteChrome>{children}</SiteChrome>
       </body>
     </html>
   );

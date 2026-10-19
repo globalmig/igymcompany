@@ -1,5 +1,5 @@
 "use client"
-import ProductForm from "@/components/admin/ProductForm";
+import ProductForm from "@/components/admin/products/ProductForm";
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 
@@ -22,18 +22,14 @@ export default function AdminProductDetailPage() {
     }, [id]);
 
 
-    if (!data) return <div className="loading">상품 정보를 불러오는 중입니다...</div>;
+    if (!data) return <div className="w-full max-w-300 mx-auto py-25 text-center xl:py-37.5">상품 정보를 불러오는 중입니다...</div>;
 
     return (
-        <article className="admin-product-form">
-            <div>
-                <div>
-                    <h2>상품 상세</h2>
-                </div>
-                <div>
-                    <ProductForm mode="detail" initialData={data} />
-                </div>
+        <div className="bg-white border border-admin-border rounded-[14px] p-6 xl:max-w-325 xl:mx-auto">
+            <div className="flex flex-wrap items-center justify-between gap-3.5 mb-5">
+                <h2 className="font-sb-l text-[1.15rem] text-admin-dark">제품 상세</h2>
             </div>
-        </article>
+            <ProductForm mode="detail" initialData={data} />
+        </div>
     )
 }

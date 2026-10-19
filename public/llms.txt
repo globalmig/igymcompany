@@ -1,0 +1,28 @@
+# 에스원이벤트
+
+> 에스원이벤트(S-ONE EVENT)는 기업, 지자체, 공공기관, 학교의 행사 기획과 대행을 전문으로 하는 업체입니다. 에어바운스·워터슬라이드·놀이기구 대여, 조립식무대/트러스·음향시스템 설치, 체육대회 기획, 공식행사·지역축제 대행 서비스를 제공합니다.
+
+에스원이벤트는 다년간의 행사 경험을 바탕으로 어린이날 행사, 기업 임직원 자녀 행사, 준공식/기념식, 지자체 축제, 학교/회사 체육대회 등 다양한 행사를 파트너십을 통해 기획·운영합니다.
+
+## 회사 정보
+
+- [회사소개](https://www.s-one-event.co.kr/about): 에스원이벤트의 연혁과 주요 행사 실적
+- [문의하기](https://www.s-one-event.co.kr/inquire): 행사 기획 및 견적 상담 문의
+
+## 서비스 (렌탈/설치)
+
+- [에어바운스](https://www.s-one-event.co.kr/airbounce): 어린이날 행사, 축제 등에 사용되는 에어바운스 대여 및 설치
+- [워터슬라이드](https://www.s-one-event.co.kr/waterslide): 여름 물놀이 행사용 워터슬라이드 대여 및 설치
+- [놀이기구](https://www.s-one-event.co.kr/amusement): 각종 행사용 놀이기구 대여 및 설치
+- [체험놀이](https://www.s-one-event.co.kr/experience): 어린이 체험활동을 위한 체험놀이 프로그램
+- [천막/테이블/의자/행사용품](https://www.s-one-event.co.kr/rental): 행사에 필요한 천막, 테이블, 의자 등 행사용품 렌탈
+
+## 행사 기획/대행
+
+- [체육대회](https://www.s-one-event.co.kr/sports_competition): 학교, 회사, 지역단체를 위한 종합 체육대회 기획 및 진행
+- [공식행사/지역축제](https://www.s-one-event.co.kr/event): 기념식, 준공식, 착공식, 제막식, 시상식, 워크샵 등 정부·지자체·공공단체 공식 행사 대행
+
+## Optional
+
+- [robots.txt](https://www.s-one-event.co.kr/robots.txt)
+- [sitemap.xml](https://www.s-one-event.co.kr/sitemap.xml)

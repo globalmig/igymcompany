@@ -41,7 +41,7 @@ const MainSlide = forwardRef<SlideHandle>((_, ref) => {
     };
 
     return (
-        <Slider ref={sliderRef} {...settings} className="main-slider">
+        <Slider ref={sliderRef} {...settings} className="[&_img]:h-162.5 [&_img]:w-full [&_img]:object-cover">
             <div>
                 <Image src="/images/banner_1.jpg" alt="에스원 이벤트 사진" width={2560} height={942} priority quality={100} />
             </div>

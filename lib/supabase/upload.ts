@@ -4,13 +4,14 @@ type UploadFolder = "thumnail" | "detail";
 
 // 이미지 파일을 Vercel 서버리스 함수를 거치지 않고 Supabase Storage로 "직접" 업로드한다.
 // (서명된 업로드 URL을 발급받아 브라우저 -> Supabase로 바로 전송)
-export async function uploadProductImages(
+async function uploadImages(
   files: File[],
-  folder: UploadFolder
+  folder: UploadFolder,
+  signUrlEndpoint: string
 ): Promise<string[]> {
   if (files.length === 0) return [];
 
-  const res = await fetch("/api/product/upload-url", {
+  const res = await fetch(signUrlEndpoint, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
@@ -40,4 +41,18 @@ export async function uploadProductImages(
   }
 
   return urls;
+}
+
+export async function uploadProductImages(
+  files: File[],
+  folder: UploadFolder
+): Promise<string[]> {
+  return uploadImages(files, folder, "/api/product/upload-url");
+}
+
+export async function uploadEventImages(
+  files: File[],
+  folder: UploadFolder
+): Promise<string[]> {
+  return uploadImages(files, folder, "/api/event/upload-url");
 }
